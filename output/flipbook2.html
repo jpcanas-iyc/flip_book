@@ -1,10 +1,10 @@
 
     <!doctype html>
-    <html lang="en">
+    <html lang="es">
     <head>
       <meta charset="utf-8"/>
       <meta name="viewport" content="width=1050, user-scalable=no" />
-      <link rel="stylesheet" href="../css/double-page.css">
+      <link rel="stylesheet" href="../css/enhanced-flipbook.css">
       <script type="text/javascript" src="../extras/jquery.min.1.7.js"></script>
       <script type="text/javascript" src="../extras/modernizr.2.5.3.min.js"></script>
     </head>
@@ -13,880 +13,1260 @@
         <div class="container">
           <div class="flipbook">
             
-    <div class="double portada">
-        <div class="page-content" style="padding:0;">
-            <img src="../img/portada.jpg" alt="Portada" 
-                 style="width:100%; height:100%; object-fit:cover; border:none;">
+    <div class="double portada-custom">
+        <div class="bg-image">
+            <img src="../img/IMG_1837.JPEG" alt="Portada">
+        </div>
+        <div class="overlay-content">
+            <h1>INFORME DE TAREAS</h1>
+            <div class="accent-bar"></div>
+            <div class="subtitle">Jefatura Project Management</div>
+            <div style="margin-top: 40px; font-size: 18px; font-family: 'Montserrat', sans-serif;">
+                Total de Proyectos: <strong>47</strong>
+            </div>
         </div>
     </div>
     
-    <div class="double">
-        <div class="page-content">
-            <h2>📊 Estadísticas Generales</h2>
-            <p><b>Total de Tareas:</b> 48</p>
-
-            <h3>Por Depósito:</h3>
-            <ul>
-                <li>Cancelado: 3</li><li>En curso: 13</li><li>En pausa: 2</li><li>Finalizado: 20</li><li>Por hacer: 10</li>
-            </ul>
-
-            <h3>Por Gerencia:</h3>
-            <ul>
-                <li>Division Comercial: 1</li><li>Gerencia Contraloria: 4</li><li>Gerencia De Informatica: 13</li><li>Gerencia Financiera: 2</li><li>Gerencia Ingenieria Y Mantenimiento: 1</li><li>Gerencia Integracion Nacional: 1</li><li>Gerencia Logistica: 16</li><li>Gerencia Mercadeo: 1</li><li>Gerencia Produccion: 1</li><li>Gerencia Servicio Al Cliente: 6</li><li>Gerencia Venta De Repuestos: 1</li><li>Sin_Definir: 1</li>
-            </ul>
-
-            <h3>Por Estado de Tarea:</h3>
-            <ul>
-                <li>Nuevo: 15</li><li>Plan Anterior: 1</li><li>Planeado: 32</li>
-            </ul>
+    <div class="double stats-page">
+        <h2>📊 ESTADÍSTICAS GENERALES</h2>
+        <div class="total-count">47</div>
+        <div style="font-size: 18px; margin-bottom: 30px; color: var(--accent-gray);">
+            Tareas Totales
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Por Depósito</h3>
+                <ul>
+                    <li><strong>Cancelado:</strong> 2</li><li><strong>En curso:</strong> 2</li><li><strong>Finalizado:</strong> 38</li><li><strong>Por hacer:</strong> 5</li>
+                </ul>
+            </div>
+            
+            <div class="stat-card">
+                <h3>Por Gerencia</h3>
+                <ul>
+                    <li><strong>Division Comercial:</strong> 1</li><li><strong>Gerencia Contraloria:</strong> 4</li><li><strong>Gerencia De Informatica:</strong> 12</li><li><strong>Gerencia De Talento Humano:</strong> 3</li><li><strong>Gerencia Financiera:</strong> 2</li><li><strong>Gerencia Ingenieria Y Mantenimiento:</strong> 1</li><li><strong>Gerencia Integracion Nacional:</strong> 1</li><li><strong>Gerencia Logistica:</strong> 14</li><li><strong>Gerencia Mercadeo:</strong> 1</li><li><strong>Gerencia Produccion:</strong> 1</li><li><strong>Gerencia Servicio Al Cliente:</strong> 6</li><li><strong>Gerencia Venta De Repuestos:</strong> 1</li>
+                </ul>
+            </div>
+            
+            <div class="stat-card" style="grid-column: span 2;">
+                <h3>Por Estado de Tarea</h3>
+                <ul style="columns: 2; column-gap: 20px;">
+                    <li><strong>Nuevo:</strong> 16</li><li><strong>Plan Anterior:</strong> 1</li><li><strong>Planeado:</strong> 30</li>
+                </ul>
+            </div>
         </div>
     </div>
     
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 100%</p>
-                    <p>Fecha Fin: 2025-04-24</p>
-                </div>
-                <h2>AB7        - PIN Automation (Porcentaje de integración nacional) Stage 1</h2>
-                <p><b>Notas:</b> "El proyecto ""PIN Automation (Porcentaje de integración nacional) Stage 1"" se centra en el diseño e implementación de un simulador para calcular el Porcentaje de Integración Nacional (PIN) de motocicletas. Se ha avanzado significativamente en el desarrollo técnico y funcional del simulador, estableciendo un proceso automatizado de ETL para centralizar información crítica desde múltiples fuentes, especialmente desde el sistema Navision, asegurando así una base de datos sólida para 2025.
-
-El desarrollo incluye la integración de datos maestros, determinando valores para materiales nacionales e importados, piezas sin integración vertical y compras CKD, lo cual permite estimar con mayor precisión el valor de integración nacional. Se ha validado visualmente esta herramienta con los involucrados, Daniel Zuluaga y Jordant Bedolla, quienes confirmaron su correcto funcionamiento.
-
-Yoward Alexander Arango revisó un archivo complementario para depurar información no relevante del cálculo del simulador, asegurando la precisión del modelo. Una reunión está programada para discutir estos hallazgos y cerrar el ciclo de revisión con todos los implicados.
-
-Hasta ahora se ha completado la primera parte del proyecto sobre la hoja de datos maestros, incluyendo la entrega de variables específicas como Integración vertical, piezas en CKD, entre otros. Anteriormente, hubo un retraso debido a temas de soporte, pero se está cumpliendo con el cronograma proyectado."</p>
-                <p><b>Inicio:</b> 2024-10-01 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-03-28</p>
+    <div class="double layout-full-overlay">
+        <div class="background-image">
+            <img src="../img/IMG_2799.JPEG" alt="Background">
+        </div>
+        <div class="gradient-overlay"></div>
+        <div class="content-box">
+            <h2>
+                PIN
+                <span class="red-accent">Automation (Porcentaje de integración nacional) Stage 1</span>
+            </h2>
+            <div class="task-info" style="font-size: 16px; margin-bottom: 15px;">
+                <strong>Código:</strong> AB7       
+            </div>
+            <div class="task-info">
+                <strong>Depósito:</strong> Finalizado
+            </div>
+            <div class="task-info">
+                <strong>Estado:</strong> Planeado
+            </div>
+            <div class="percentage-badge" style="margin-top: 20px; font-size: 18px;">
+                100%
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 100%</p>
-                    <p>Fecha Fin: 2025-02-28</p>
+    </div>
+    
+    <div class="double layout-center-margins">
+        <div class="left-margin">
+            <div class="margin-text">AD1       </div>
+        </div>
+        <div class="center-content">
+            <div class="image-container">
+                <img src="../img/IMG_2797.JPEG" alt="Background">
+                <div class="text-overlay">
+                    <h2>Identificación de correos cargados/no cargados Qualtrics</h2>
+                    <div class="task-info">
+                        <strong>Planeado</strong> - 100%
+                    </div>
+                    <div class="task-info">
+                        ...
+                    </div>
                 </div>
-                <h2>AD1        - Identificación de correos cargados/no cargados Qualtrics</h2>
-                <p><b>Notas:</b> La tarea *Identificación de correos cargados/no cargados Qualtrics* tiene como objetivo mejorar la integración entre Qualtrics y el Data Warehouse, iniciando el 2 de diciembre de 2024 y culminando el 28 de febrero de 2025. El proyecto se centra en corregir discrepancias reportadas por distribuidores y puntos de venta.
-
-Hasta la fecha, se ha realizado un análisis preliminar de la base de datos de Qualtrics para identificar y etiquetar a los contactos como *No cargados por la plataforma*. Se ha detectado y comenzado a trabajar en la eliminación de registros duplicados. Hay progreso en la incorporación de los estados operativos de Qualtrics, como *Email Sent* y *Survey Started*, al Data Warehouse. Esto busca mejorar el seguimiento y la eficacia de las campañas.
-
-Además, se han iniciado gestiones para actualizar los datos enviados a Qualtrics, asegurando que contengan campos unificados esenciales para las áreas de ventas y posventa. Los desafíos encontrados incluyen la sincronización y validación de datos entre sistemas, lo cual está siendo abordado con reuniones regulares entre los equipos de TI y Servicio al Cliente para asegurar el cumplimiento de los requisitos.
-
-El proyecto avanza de acuerdo al cronograma, y las acciones tomadas están alineadas con los objetivos definidos para optimizar la integración y mejorar la calidad de los datos entre Qualtrics y el Data Warehouse.</p>
-                <p><b>Inicio:</b> 2024-12-02 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-04-28</p>
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 100%</p>
-                    <p>Fecha Fin: 2025-02-28</p>
+        <div class="right-margin">
+            <div class="margin-text">PROYECTO</div>
+        </div>
+    </div>
+    
+    <div class="double layout-right-text">
+        <div class="text-column">
+            <div class="text-content">
+                <h2>Actualización información CUC</h2>
+                <div class="divider"></div>
+                <div class="task-label">Código: AD4       </div>
+                <div class="task-info">
+                    <strong>Estado:</strong> Planeado
                 </div>
-                <h2>AD4        - Actualización información CUC</h2>
-                <p><b>Notas:</b> "La tarea de actualización de información CUC ha avanzado significativamente en el proceso de optimización de la gestión de información crítica mediante la automatización. Se han implementado con éxito cinco alertas de correo electrónico programadas para ejecutarse semanalmente, dirigidas a las áreas de mercadeo, servicio de garantías y servicio al cliente. Estas alertas tienen como objetivo identificar las direcciones de envío sin clasificación comercial o con insuficiencia presupuestaria, aportando a la precisión y eficiencia en la gestión de datos.
-
-Adicionalmente, se ha desarrollado un proceso automatizado de integración de datos mediante una ETL escrita en Python. Esta ETL accede a un archivo compartido por el área de servicio y David Álvarez, lo que asegura que la información del CUC en la tabla de direcciones de envío se mantenga actualizada y centralizada en el Datamart. Se espera que este mecanismo garantice la disponibilidad, precisión y centralización de la información crítica del CUC, avanzando conforme a lo planificado dentro del cronograma establecido del proyecto."</p>
-                <p><b>Inicio:</b> 2025-01-06 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-01-31</p>
+                <div class="task-info">
+                    <strong>Notas:</strong><br>
+                </div>
+                <div class="task-info">
+                    <strong>Progreso:</strong> 100%
+                </div>
+                <div class="task-info">
+                    <div class="date-display">Entrega: 2025-01-31</div>
+                </div>
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 100%</p>
-                    <p>Fecha Fin: 2025-02-17</p>
+        <div class="image-column">
+            <img src="../img/IMG_0283.JPEG" alt="Background">
+        </div>
+    </div>
+    
+    <div class="double layout-center-margins">
+        <div class="left-margin">
+            <div class="margin-text">AA8       </div>
+        </div>
+        <div class="center-content">
+            <div class="image-container">
+                <img src="../img/IMG_3073.JPEG" alt="Background">
+                <div class="text-overlay">
+                    <h2>Curriculum Vitae Yamaha Web Site</h2>
+                    <div class="task-info">
+                        <strong>Planeado</strong> - 100%
+                    </div>
+                    <div class="task-info">
+                        ...
+                    </div>
                 </div>
-                <h2>AA8        - Curriculum Vitae Yamaha Web Site</h2>
-                <p><b>Notas:</b> El proyecto *Curriculum Vitae Yamaha Web Site* tiene como objetivo integrar datos desde el formulario *Trabaja con Nosotros* del sitio web de Incolmotos Yamaha hacia el Data Warehouse corporativo. Esto implica un proceso ETL (extracción, transformación y carga) que requiere una conexión segura a la base de datos MySQL alojada en un servidor de AWS. La transformación de datos tendrá que ajustarse a los estándares de calidad de la empresa, para luego ser almacenados en el DWH y accesibles a través de una vista en SQL para su consulta por las áreas interesadas.
-
-El cronograma del proyecto más reciente indica las siguientes actividades: 
-
-1. **Proceso ETL**: Su implementación se programó del 6 de enero al 17 de febrero de 2025. 
-
-2. **Extracción de Información y Creación de Reporte**: Del 4 al 17 de febrero de 2025, se centrará en extraer datos del formulario y generar un reporte para su consumo. Asimismo, está prevista una reunión con Juliana Cardona para completar esta tarea.
-
-3. **Reuniones Iniciales y Configuraciones**: Entre el 13 de enero y el 3 de febrero de 2025, se llevaron a cabo reuniones con los implicados en el proyecto. Durante este periodo, se obtuvieron los usuarios y conexiones necesarias para iniciar el trabajo técnico. Un practicante recibió una *baya* (conjunto) de datos para adelantar transformaciones preliminares.
-
-A pesar de algunos retrasos en la entrega de usuarios y conexiones, se han tomado medidas para seguir avanzando en las transformaciones iniciales. La coordinación con Recursos Humanos y otros stakeholders continúa para asegurar una integración efectiva de los datos.</p>
-                <p><b>Inicio:</b> 2025-01-06 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-01-31</p>
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 100%</p>
-                    <p>Fecha Fin: 2025-02-14</p>
-                </div>
-                <h2>AA9        - Ciberseguridad Model</h2>
-                <p><b>Notas:</b> "El proyecto ""Ciberseguridad Model"" tiene como objetivo principal la implementación del consumo de la API del Web Application Firewall (WAF) para extraer y centralizar información en el Data Warehouse corporativo. Esta iniciativa, impulsada por el área de Ciberseguridad, busca facilitar el análisis de datos mediante herramientas como Power BI.
-
-Las actividades se han estructurado de la siguiente manera:
-
-1. **Reunión Inicial (13 de enero - 3 de febrero de 2025):** En esta fase, se llevó a cabo una reunión con Cristian Pavony para comprender el proceso de descarga de diferentes fuentes de información.
-
-2. **Desarrollo del Script (4 de febrero - 14 de febrero de 2025):** Se está desarrollando un script para consumir la API alojada en servidores de AWS, habilitando la conexión y extracción de datos del WAF.
-
-La fase de reunión inicial ya ha sido completada con éxito, brindando una comprensión clara del proceso requerido. Actualmente, el desarrollo del script avanza dentro del cronograma previsto para finalizar a mediados de febrero de 2025, momento en el cual se concluirá la extracción de datos básicos para el análisis por parte del equipo de Ciberseguridad y de Analítica.
-
-El proyecto se encuentra en una etapa avanzada, cumpliendo con las expectativas y plazos indicados por las partes interesadas."</p>
-                <p><b>Inicio:</b> 2025-01-06 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-01-31</p>
+        <div class="right-margin">
+            <div class="margin-text">PROYECTO</div>
+        </div>
+    </div>
+    
+    <div class="double layout-full-overlay">
+        <div class="background-image">
+            <img src="../img/IMG_3086.JPEG" alt="Background">
+        </div>
+        <div class="gradient-overlay"></div>
+        <div class="content-box">
+            <h2>
+                Ciberseguridad
+                <span class="red-accent">Model</span>
+            </h2>
+            <div class="task-info" style="font-size: 16px; margin-bottom: 15px;">
+                <strong>Código:</strong> AA9       
+            </div>
+            <div class="task-info">
+                <strong>Depósito:</strong> Finalizado
+            </div>
+            <div class="task-info">
+                <strong>Estado:</strong> Planeado
+            </div>
+            <div class="percentage-badge" style="margin-top: 20px; font-size: 18px;">
+                100%
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 100%</p>
-                    <p>Fecha Fin: 2025-01-31</p>
+    </div>
+    
+    <div class="double layout-center-margins">
+        <div class="left-margin">
+            <div class="margin-text">AA2       </div>
+        </div>
+        <div class="center-content">
+            <div class="image-container">
+                <img src="../img/IMG_3073.JPEG" alt="Background">
+                <div class="text-overlay">
+                    <h2>Pedido de Ventas Motocicletas Facturadas</h2>
+                    <div class="task-info">
+                        <strong>Planeado</strong> - 100%
+                    </div>
+                    <div class="task-info">
+                        ...
+                    </div>
                 </div>
-                <h2>AA2        - Pedido de Ventas Motocicletas Facturadas</h2>
-                <p><b>Notas:</b> El proyecto *Pedido de Ventas Motocicletas Facturadas* tiene como objetivo crear un modelo de datos que permita identificar y analizar los pedidos de motocicletas ingresados a través de la nueva plataforma de pedidos del portal Yamaha. La información relevante para el modelo ya se encuentra registrada en el ERP Navision y necesita ser integrada en el Data Warehouse corporativo. Este proceso es esencial para habilitar la exportación y visualización de datos en Power BI.
-
-El período del proyecto está delimitado entre el 1 de enero de 2025 y el 31 de enero de 2025. Se ha avanzado en la creación del modelo de datos que incorpora los registros de los pedidos desde el portal Yamaha, y dicho modelo está listo para su posterior implementación. Esto permitirá la generación de informes en Power BI, facilitando el análisis y la toma de decisiones basadas en los datos operativos más recientes.
-
-El proyecto parece avanzar según lo planeado, con el modelo de datos creado y preparado para integrarse en los distintos informes de Power BI requeridos por la organización. No se han indicado dificultades significativas en las notas, lo cual sugiere un progreso alineado con los objetivos y plazos marcados. El enfoque técnico se mantiene en asegurar la correcta integración en el Data Warehouse y la compatibilidad con las herramientas de visualización utilizadas por la empresa.</p>
-                <p><b>Inicio:</b> 2025-01-01 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-01-31</p>
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 100%</p>
-                    <p>Fecha Fin: 2025-04-11</p>
+        <div class="right-margin">
+            <div class="margin-text">PROYECTO</div>
+        </div>
+    </div>
+    
+    <div class="double layout-left-text">
+        <div class="text-column">
+            <div class="text-content">
+                <div class="accent-line"></div>
+                <div class="task-code">AA4       </div>
+                <h2>Archivo Compras Internacionales</h2>
+                <div class="task-info">
+                    <div class="task-label">Depósito</div>
+                    <div class="task-value">Finalizado</div>
                 </div>
-                <h2>AA4        - Archivo Compras Internacionales</h2>
-                <p><b>Notas:</b> "El proyecto ""Archivo Compras Internacionales"" tiene como objetivo automatizar el reporte conocido como ""archivo rosado"", debido a los problemas asociados con su manejo manual en Excel, especialmente en cuanto a integridad y actualización de la información. Se ha priorizado la conexión del reporte desde el Data Warehouse corporativo para garantizar una fuente de datos confiable, disminuyendo riesgos de errores manuales.
-
-El proyecto ha experimentado un ligero retraso por la ausencia de la persona responsable, aunque se han logrado avances significativos. Entre las mejoras realizadas se incluyen: la adición de columnas para especificaciones adicionales como Color y Cambios de Especificaciones, estandarización de valores y la inclusión de campos clave como la ""Fecha de Recepción Esperada"" y el ""Mes de Producción de Origen"". También se ha efectuado una revisión y reorganización del orden de columnas para mejorar la usabilidad de la información.
-
-Se han establecido sesiones con el cliente para clarificar los requerimientos y se ha documentado el procedimiento para extraer información de Navision. La revisión de las tablas necesarias para la migración de datos ha sido abordada con el usuario y el desarrollador involucrados.
-
-De cara a garantizar la trazabilidad y actualización, se busca habilitar diferentes vistas SQL según el usuario, ya que un 90% de la información requerida actualmente reside en Navision. Se está cumpliendo con los plazos establecidos a pesar de las contratiempos iniciales, con un enfoque claro en mejorar la precisión y utilidad de la información crítica para el área de Compras Internacionales."</p>
-                <p><b>Inicio:</b> 2025-02-03 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-02-28</p>
+                <div class="task-info">
+                    <div class="task-label">Gerencia</div>
+                    <div class="task-value">Gerencia Logistica</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 100.0%"></div>
+                </div>
+                <div class="percentage-badge">100%</div>
+                <div class="task-info">
+                    <div class="date-display">Inicio: 2025-02-03</div>
+                    <div class="date-display">Fin: 2025-04-11</div>
+                </div>
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 100%</p>
-                    <p>Fecha Fin: 2025-04-11</p>
+        <div class="image-column">
+            <img src="../img/IMG_1990.JPEG" alt="Background">
+        </div>
+    </div>
+    
+    <div class="double layout-left-text">
+        <div class="text-column">
+            <div class="text-content">
+                <div class="accent-line"></div>
+                <div class="task-code">AD825     </div>
+                <h2>Modelo de Datos Indicadores Económicos</h2>
+                <div class="task-info">
+                    <div class="task-label">Depósito</div>
+                    <div class="task-value">Finalizado</div>
                 </div>
-                <h2>AD825      - Modelo de Datos Indicadores Económicos</h2>
-                <p><b>Notas:</b> El proyecto *Modelo de Datos Indicadores Económicos* busca automatizar la captura, almacenamiento y gestión de indicadores económicos clave provenientes de fuentes oficiales como Bancolombia y la Superintendencia Financiera, con el objetivo de eliminar procesos manuales y optimizar la obtención y consulta de datos críticos dentro de la compañía.
-
-Actualmente, el proyecto se encuentra en una fase preliminar, con actividades iniciales centradas en la recolección de requerimientos y selección de tecnologías adecuadas para la implementación del sistema automatizado. Se han identificado las fuentes de datos principales y se están estableciendo los protocolos para su integración eficiente. Los equipos de desarrollo y datos están colaborando estrechamente para asegurar que el modelo de datos diseñado sea escalable y cumpla con las expectativas de rendimiento.
-
-Sin embargo, se han encontrado retos relacionados con la compatibilidad y el acceso a las APIs de las fuentes oficiales, lo que ha requerido ajustes en el cronograma inicial y una mayor coordinación con los proveedores de datos para garantizar un flujo de datos constante y confiable.
-
-Los avances hasta el momento incluyen la definición del esquema de modelado de datos y el inicio del desarrollo del prototipo del sistema, el cual permitirá pruebas iniciales antes de proceder con la implementación completa. Se ha acordado un marco de revisiones semanales para asegurar que se aborden de manera oportuna las dificultades técnicas y logísticas que puedan surgir.
-
-La expectativa es cumplir con los plazos establecidos, ajustando los planes conforme sea necesario para abordar los desafíos identificados sin comprometer la calidad del entregable final.</p>
-                <p><b>Inicio:</b> 2025-03-24 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-04-11</p>
+                <div class="task-info">
+                    <div class="task-label">Gerencia</div>
+                    <div class="task-value">Gerencia De Informatica</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 100.0%"></div>
+                </div>
+                <div class="percentage-badge">100%</div>
+                <div class="task-info">
+                    <div class="date-display">Inicio: 2025-03-24</div>
+                    <div class="date-display">Fin: 2025-04-11</div>
+                </div>
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 100%</p>
-                    <p>Fecha Fin: 2025-03-28</p>
+        <div class="image-column">
+            <img src="../img/IMG_1106.JPEG" alt="Background">
+        </div>
+    </div>
+    
+    <div class="double layout-left-text">
+        <div class="text-column">
+            <div class="text-content">
+                <div class="accent-line"></div>
+                <div class="task-code">AB5       </div>
+                <h2>Unit FOB Cost by Model</h2>
+                <div class="task-info">
+                    <div class="task-label">Depósito</div>
+                    <div class="task-value">Finalizado</div>
                 </div>
-                <h2>AB5        - Unit FOB Cost by Model</h2>
-                <p><b>Notas:</b> None</p>
-                <p><b>Inicio:</b> 2025-03-03 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-03-28</p>
+                <div class="task-info">
+                    <div class="task-label">Gerencia</div>
+                    <div class="task-value">Gerencia Logistica</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 100.0%"></div>
+                </div>
+                <div class="percentage-badge">100%</div>
+                <div class="task-info">
+                    <div class="date-display">Inicio: 2025-03-03</div>
+                    <div class="date-display">Fin: 2025-03-28</div>
+                </div>
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 100%</p>
-                    <p>Fecha Fin: 2025-03-28</p>
+        <div class="image-column">
+            <img src="../img/IMG_0283.JPEG" alt="Background">
+        </div>
+    </div>
+    
+    <div class="double layout-left-text">
+        <div class="text-column">
+            <div class="text-content">
+                <div class="accent-line"></div>
+                <div class="task-code">AB8       </div>
+                <h2>MOK</h2>
+                <div class="task-info">
+                    <div class="task-label">Depósito</div>
+                    <div class="task-value">Finalizado</div>
                 </div>
-                <h2>AB8        - MOK</h2>
-                <p><b>Notas:</b> None</p>
-                <p><b>Inicio:</b> 2025-03-03 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-03-28</p>
+                <div class="task-info">
+                    <div class="task-label">Gerencia</div>
+                    <div class="task-value">Gerencia Servicio Al Cliente</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 100.0%"></div>
+                </div>
+                <div class="percentage-badge">100%</div>
+                <div class="task-info">
+                    <div class="date-display">Inicio: 2025-03-03</div>
+                    <div class="date-display">Fin: 2025-03-28</div>
+                </div>
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 100%</p>
-                    <p>Fecha Fin: 2025-05-02</p>
+        <div class="image-column">
+            <img src="../img/IMG_2797.JPEG" alt="Background">
+        </div>
+    </div>
+    
+    <div class="double layout-diagonal">
+        <div class="diagonal-bg"></div>
+        <div class="content-wrapper">
+            <div class="text-section">
+                <div class="task-code" style="color: var(--accent-red);">AB1       </div>
+                <h2>Dispatch Algorithm Stage 2</h2>
+                <div class="task-info">
+                    <strong>Depósito:</strong> Finalizado
                 </div>
-                <h2>AB1        - Dispatch Algorithm Stage 2</h2>
-                <p><b>Notas:</b> El proyecto *Dispatch Algorithm Stage 2* está centrado en optimizar la distribución de motocicletas a través de un algoritmo que ajusta el cupo de distribuidores según niveles de pobreza y añade nuevas funcionalidades al sistema. 
-
-Durante el periodo previsto, se completó la entrega relacionada con el recálculo del cupo y la re-distribución basada en pobreza. Sin embargo, se detectaron inconsistencias en escenarios donde los distribuidores hacen múltiples pedidos de un mismo modelo de motocicleta, comprometiendo los resultados. Un análisis exhaustivo identificó las causas raíz de estos problemas y actualmente se están implementando las correcciones necesarias para asegurar la integridad de los datos y el correcto funcionamiento en todos los escenarios.
-
-Las actividades realizadas incluyen la reevaluación del cupo de distribuidores, el desarrollo de alertas automáticas por correo electrónico para nuevos productos, y la incorporación de una funcionalidad para adjuntar un archivo de Excel con sugerencias de inventario. También se realizaron ajustes en el algoritmo para optimizar el proceso de distribución basado en disponibilidad real y simulada, logrando una mejora notable en los tiempos de ejecución y agilidad operativa. Asimismo, el algoritmo fue actualizado para reflejar nuevas necesidades del negocio, incorporando cambios en la demanda y reglas dinámicas de distribución, resultando en una asignación más precisa y adaptable. Además, se implementó una opción para ordenar la repartición por antigüedad de pedidos o proporción.
-
-El proyecto incluyó reuniones y análisis de código con el objetivo de entender y mejorar las funcionalidades existentes. La integración de estas mejoras está en proceso para garantizar el éxito del sistema.</p>
-                <p><b>Inicio:</b> 2025-02-03 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-04-28</p>
+                <div class="task-info">
+                    <strong>Gerencia:</strong> Gerencia Produccion
+                </div>
+                <div class="percentage-badge">100% Completado</div>
+            </div>
+            <div class="image-section">
+                <img src="../img/IMG_1106.JPEG" alt="Background">
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 100%</p>
-                    <p>Fecha Fin: 2025-05-02</p>
+    </div>
+    
+    <div class="double layout-right-text">
+        <div class="text-column">
+            <div class="text-content">
+                <h2>Integración Estados Envíos Servientrega</h2>
+                <div class="divider"></div>
+                <div class="task-label">Código: AD9       </div>
+                <div class="task-info">
+                    <strong>Estado:</strong> Nuevo
                 </div>
-                <h2>AD9        - Integración Estados Envíos Servientrega</h2>
-                <p><b>Notas:</b> La tarea *Integración Estados Envíos Servientrega* busca acceder a la información actualizada sobre los estados de los envíos de Servientrega, utilizando la tabla de encabezado de facturas de venta de Navision. El objetivo es consultar las guías que no estén en los estados *ENTREGADO* o *FINALIZADO*, enfocándose en aquellas cuyo *Número de Seguimiento Bulto* comienza por *22*. El proyecto está programado para ejecutarse entre el 1 de abril y el 2 de mayo de 2025. Hasta el momento, se ha construido un proceso de extracción de detalles de guías a través del webservice del proveedor y creado tablas finales en el Data Warehouse (DWH), con un proceso automático diario implementado. 
-
-En una reunión inicial de entrega, el cliente solicitó la adición de un campo de detalle no disponible en el método original, lo que ha llevado al uso de dos métodos del proveedor. Estos datos se integrarán en un único conjunto de datos que está pendiente de una segunda prueba y reunión de entrega. El proyecto avanza conforme al cronograma, con la mayoría de las estructuras técnicas establecidas y enfocándose ahora en la integración final y pruebas adicionales para satisfacer los requisitos del cliente.</p>
-                <p><b>Inicio:</b> 2025-04-01 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-05-02</p>
+                <div class="task-info">
+                    <strong>Notas:</strong><br>
+                </div>
+                <div class="task-info">
+                    <strong>Progreso:</strong> 100%
+                </div>
+                <div class="task-info">
+                    <div class="date-display">Entrega: 2025-05-02</div>
+                </div>
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 100%</p>
-                    <p>Fecha Fin: 2025-05-30</p>
+        <div class="image-column">
+            <img src="../img/IMG_1990.JPEG" alt="Background">
+        </div>
+    </div>
+    
+    <div class="double layout-center-margins">
+        <div class="left-margin">
+            <div class="margin-text">AE1       </div>
+        </div>
+        <div class="center-content">
+            <div class="image-container">
+                <img src="../img/IMG_3086.JPEG" alt="Background">
+                <div class="text-overlay">
+                    <h2>Informe Factura vs Empaque WMS</h2>
+                    <div class="task-info">
+                        <strong>Nuevo</strong> - 100%
+                    </div>
+                    <div class="task-info">
+                        ...
+                    </div>
                 </div>
-                <h2>AE1        - Informe Factura vs Empaque WMS</h2>
-                <p><b>Notas:</b> "La tarea ""Integración Estados Envíos Servientrega"" tiene como objetivo acceder a la información actualizada sobre los estados de envíos a través del API Web Service de Servientrega. Se enfoca en guías cuyo ""Número de Seguimiento Bulto"" comienza por ""22"" y cuyos estados aún no están ""ENTREGADO"" o ""FINALIZADO"". El proceso de extracción inicial de detalles fue implementado utilizando el webservice del proveedor, seguido por la creación de tablas finales en el Data Warehouse (DWH) y un proceso automático diario.
-
-Durante la primera reunión de entrega, el cliente solicitó la adición de un campo de detalle que requería consumir un segundo método del proveedor. Actualmente, ambos métodos están integrados en un conjunto de datos unificado. El proyecto se encuentra en la etapa final, pendiente de la realización de una segunda prueba y una reunión de entrega para validar la implementación y proceder con su cierre."</p>
-                <p><b>Inicio:</b> 2025-04-22 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-05-16</p>
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 100%</p>
-                    <p>Fecha Fin: 2025-05-16</p>
-                </div>
-                <h2>AD6        - PSI (Purchases, Sales and Inventory) V2.</h2>
-                <p><b>Notas:</b> El proyecto PSI V2 se centra en la creación de un Datamart para gestionar eficientemente los datos del Informe PSI, optimizando la extracción y transformación de información crítica para decisiones estratégicas. Actualmente, la generación del informe es manual y dispersa, por lo que el objetivo es implementar un modelo centralizado de datos usando procesos ETL, reduciendo errores y mejorando la disponibilidad de datos para áreas clave.
-
-Hasta la fecha, se han automatizado procesos críticos como ETA (CKD IN), producción, ventas mayoristas y minoristas (actual/planicado) y stocks de unidades CBU, mejorando la eficiencia y disponibilidad de información. Quedan pendientes la automatización de los stocks de CKD y de los concesionarios.
-
-Las pruebas de calidad sobre datos de motocicletas, con foco en ETA, producción, stock (CKD/CBU/concesionarios) y retail, mostraron alta consistencia e integridad frente al archivo PSI, sin hallazgos críticos. Con la colaboración de la usuaria clave Estefanía Pérez, se confirmó que la información es acorde a los planes operativos, y se realizaron ajustes menores en el stock CBU, que ya han sido validados y consolidados.
-
-Se ha reprogramado la reunión final para completar el proyecto, asegurando que todos los procesos estén validados y funcionando de acuerdo a lo planificado.</p>
-                <p><b>Inicio:</b> 2025-04-01 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-05-16</p>
+        <div class="right-margin">
+            <div class="margin-text">PROYECTO</div>
+        </div>
+    </div>
+    
+    <div class="double layout-full-overlay">
+        <div class="background-image">
+            <img src="../img/IMG_3052.JPEG" alt="Background">
+        </div>
+        <div class="gradient-overlay"></div>
+        <div class="content-box">
+            <h2>
+                PSI
+                <span class="red-accent">(Purchases, Sales and Inventory) V2.</span>
+            </h2>
+            <div class="task-info" style="font-size: 16px; margin-bottom: 15px;">
+                <strong>Código:</strong> AD6       
+            </div>
+            <div class="task-info">
+                <strong>Depósito:</strong> Finalizado
+            </div>
+            <div class="task-info">
+                <strong>Estado:</strong> Nuevo
+            </div>
+            <div class="percentage-badge" style="margin-top: 20px; font-size: 18px;">
+                100%
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 100%</p>
-                    <p>Fecha Fin: 2025-05-30</p>
+    </div>
+    
+    <div class="double layout-right-text">
+        <div class="text-column">
+            <div class="text-content">
+                <h2>Modelo de Datos Presupuesto - Integración Cubo Contable</h2>
+                <div class="divider"></div>
+                <div class="task-label">Código: AE6       </div>
+                <div class="task-info">
+                    <strong>Estado:</strong> Nuevo
                 </div>
-                <h2>AE6        - Modelo de Datos Presupuesto - Integración Cubo Contable</h2>
-                <p><b>Notas:</b> "El proyecto ""PSI V2"" tiene como objetivo desarrollar un Datamart para la captura, almacenamiento y gestión eficiente de datos del Informe PSI, centrado en optimizar la obtención de información para la toma de decisiones. Actualmente, el informe se genera mediante procesos manuales que implican la recopilación de datos dispersos. El desarrollo de este proyecto se enfoca en implementar un modelo de datos centralizado con procesos ETL, lo que permitirá automatizar la extracción y transformación de información relevante, reduciendo errores y mejorando la disponibilidad de datos para las áreas comerciales, operativas y de presidencia.
-
-El cronograma del proyecto se ha distribuido en múltiples etapas. Desde el 1 de abril hasta el 16 de mayo de 2025, se han llevado a cabo las pruebas de calidad sobre datos clave como ETA, producción, y stocks en diferentes unidades y niveles de distribución. Estas pruebas, realizadas con el apoyo de la usuaria clave Estefanía Pérez, confirmaron la consistencia e integridad de la información frente al archivo PSI, sin hallazgos críticos. Se han efectuado y validado correcciones menores, particularmente en los datos relacionados con Stock CBU. Una reunión de entrega se ha reprogramado para finalizar el proyecto.
-
-Además, se ha logrado una automatización significativa dentro del proyecto PSI en la línea de motocicletas, mejorando la eficiencia operativa y comercial. Los procesos automatizados incluyen producción, distribución mayorista y minorista, y gestión de stocks en diferentes estados y ubicaciones, tales como CKD y CBU, con algunos elementos, como el stock de unidades CKD y de concesionarios, aún pendientes de automatización.
-
-En conclusión, el proyecto ha avanzado considerablemente hacia la creación de un sistema de gestión de datos más eficaz y automatizado, alineando la estructura de datos con los planes operativos y promoviendo la toma de decisiones basadas en datos precisos y accesibles."</p>
-                <p><b>Inicio:</b> 2025-05-06 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-05-30</p>
+                <div class="task-info">
+                    <strong>Notas:</strong><br>
+                </div>
+                <div class="task-info">
+                    <strong>Progreso:</strong> 100%
+                </div>
+                <div class="task-info">
+                    <div class="date-display">Entrega: 2025-05-30</div>
+                </div>
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 100%</p>
-                    <p>Fecha Fin: 2025-06-13</p>
-                </div>
-                <h2>AE9        - Reporte - Histórico Contrato Negocios Especiales</h2>
-                <p><b>Notas:</b> La tarea *Reporte - Histórico Contrato Negocios Especiales* tiene como objetivo automatizar un informe crítico para el área de Negocios Especiales, que actualmente se genera manualmente y requiere entre 5 y 10 minutos por contrato, lo cual es operativamente insostenible. El proyecto se centra en la consolidación de datos en un Data Warehouse (DWH) y la posterior creación de un reporte automatizado que incluye información clave sobre más de 400 contratos con entidades públicas y privadas.
-
-El proceso involucra la creación de una tabla consolidada en el DWH con información actualizada sobre la ejecución de los contratos. Los datos que deben ser incluidos comprenden aspectos como el contrato, cliente, conceptos por repuestos y mano de obra, fechas de servicio, inicio y fin de contrato, porcentaje ejecutado y pendiente, kilometrajes en cada mantenimiento, descripciones y cantidades de productos, y la razón social del cliente.
-
-El reporte final deberá ser capaz de presentar estos datos de manera coherente y precisa para cada cliente, facilitando así el acceso a información crítica sobre los contratos en curso. Esto no solo mejorará la eficiencia operativa sino que también asegurará que las solicitudes de updates por parte de las entidades sean atendidas de forma más rápida y precisa. El proyecto está programado para empezar el 3 de junio de 2025 y finalizar el 13 de junio de 2025.</p>
-                <p><b>Inicio:</b> 2025-06-03 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-06-13</p>
+        <div class="image-column">
+            <img src="../img/IMG_3086.JPEG" alt="Background">
+        </div>
+    </div>
+    
+    <div class="double layout-full-overlay">
+        <div class="background-image">
+            <img src="../img/IMG_3073.JPEG" alt="Background">
+        </div>
+        <div class="gradient-overlay"></div>
+        <div class="content-box">
+            <h2>
+                Reporte
+                <span class="red-accent">- Histórico Contrato Negocios Especiales</span>
+            </h2>
+            <div class="task-info" style="font-size: 16px; margin-bottom: 15px;">
+                <strong>Código:</strong> AE9       
+            </div>
+            <div class="task-info">
+                <strong>Depósito:</strong> Finalizado
+            </div>
+            <div class="task-info">
+                <strong>Estado:</strong> Planeado
+            </div>
+            <div class="percentage-badge" style="margin-top: 20px; font-size: 18px;">
+                100%
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 100%</p>
-                    <p>Fecha Fin: 2025-07-18</p>
+    </div>
+    
+    <div class="double layout-diagonal">
+        <div class="diagonal-bg"></div>
+        <div class="content-wrapper">
+            <div class="text-section">
+                <div class="task-code" style="color: var(--accent-red);">AF2       </div>
+                <h2>Modelo Pedidos Pendientes - Eliminados</h2>
+                <div class="task-info">
+                    <strong>Depósito:</strong> Finalizado
                 </div>
-                <h2>AF2        - Modelo Pedidos Pendientes - Eliminados</h2>
-                <p><b>Notas:</b> "El proyecto para automatizar el informe crítico de gestión de contratos del área de Negocios Especiales está programado para ejecutarse entre el 3 y el 13 de junio de 2025. La necesidad de este proyecto surge debido a la alta frecuencia de solicitudes para actualizar el estado de más de 400 contratos con entidades públicas y privadas, lo cual actualmente requiere entre 5 y 10 minutos por contrato cuando se realiza manualmente. 
-
-Hasta el momento, se ha identificado la necesidad de consolidar una base de datos en el Data Warehouse (DWH) que contenga la información actualizada sobre la ejecución de contratos. Se espera que desde esta base de datos se genere un reporte automatizado que cubra aspectos clave como contrato, cliente, conceptos de repuestos y mano de obra, fechas de servicios, inicio y fin de contratos, porcentaje de ejecución y pendientes, así como kilometrajes de mantenimiento. Además, se está considerando incluir descripciones de productos, cantidades y la razón social del cliente. 
-
-El objetivo final es entregar un reporte al cliente que confirme la coherencia de los resultados y satisfaga su necesidad de información precisa y actualizada. No se han reportado aún dificultades o retrasos significativos en la planificación de este proyecto."</p>
-                <p><b>Inicio:</b> 2025-06-16 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-07-18</p>
+                <div class="task-info">
+                    <strong>Gerencia:</strong> Gerencia Venta De Repuestos
+                </div>
+                <div class="percentage-badge">100% Completado</div>
+            </div>
+            <div class="image-section">
+                <img src="../img/IMG_1837.JPEG" alt="Background">
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 100%</p>
-                    <p>Fecha Fin: 2025-08-01</p>
-                </div>
-                <h2>AE3        - Perfil Logístico y Ocupación de Estanterías</h2>
-                <p><b>Notas:</b> El proyecto *Perfil Logístico y Ocupación de Estanterías* tiene como objetivo la optimización de recursos de almacenamiento y despacho mediante la implementación de informes SQL que permitan mejorar la trazabilidad logística y la ocupación del almacén. Esta iniciativa, liderada por el área logística, busca optimizar la gestión operativa y facilitar auditorías anuales exigidas por la casa matriz en Japón. Actualmente, las medidas logísticas de los productos se almacenan en Navision, aunque aún no se utilizan de manera estructurada para generar indicadores.
-
-Se ha establecido un plan de acción de la siguiente manera:
-
-1. **Inicio de Proyecto (16/06/2025 - 04/07/2025):** Se realizó una reunión de entendimiento con Pablo Betancur para definir las tablas fuente de Navision y las dimensiones del WMS necesarias. Se acordó que el cliente actualizará las medidas de las cajas mientras se avanza en la construcción del modelo de datos.
-
-2. **Creación de Fact y Modelado (07/07/2025 - 18/07/2025):** Se genera la creación de una Fact para la tabla *[NAVIPROD].[dbo].[Incolmotos Yamaha S_A_$Bin]* para almacenar detalles de la ocupación de estanterías. Además, se planificaron reuniones recurrentes con Ramón Zapata para la carga de datos y validación de estanterías. Se añadió la tabla *[NAVIPROD].[dbo].[Incolmotos Yamaha S_A_$Bin Content]* al modelo para relacionar los productos ocupando una estantería.
-
-3. **Desarrollo de Consultas (21/07/2025 - 01/08/2025):** Se avanza en el desarrollo de consultas y cálculos de peso y volumen de estanterías y productos. Se incluye una columna en el reporte para mostrar el peso y volumen libre por estantería, lo cual ayudará a estimar la disponibilidad. Se gestiona la implementación de dimensiones de tipo contenedor, zonas de Navision, y un modelo que involucra la fact de contenedores y detalle de almacenamiento.
-
-Finalmente, se ha programado una reunión de entrega y validación con Camila Villa y Pablo Betancur para el 5 de agosto de 2025 a las 15:00. El proyecto avanza dentro del cronograma establecido, y se espera que cumpla con los objetivos de mejora de trazabilidad y optimización del uso del espacio en el almacén.</p>
-                <p><b>Inicio:</b> 2025-06-16 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-07-31</p>
+    </div>
+    
+    <div class="double layout-grid">
+        <div class="text-area">
+            <h2>Perfil Logístico y Ocupación de Estanterías</h2>
+            <div class="task-info">
+                <div class="task-label">Código</div>
+                <div class="task-value">AE3       </div>
+            </div>
+            <div class="task-info">
+                <div class="task-label">Notas</div>
+                <div class="task-value">..</div>
+            </div>
+            <div class="highlight-box">
+                <strong>Progreso:</strong> 100%<br>
+                <strong>Estado:</strong> Nuevo
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 100%</p>
-                    <p>Fecha Fin: 2025-09-12</p>
+        <div class="image-area-1">
+            <img src="../img/IMG_0206.JPEG" alt="Background">
+        </div>
+        <div class="image-area-2">
+            <div>
+                <div class="task-label">Depósito</div>
+                <div style="font-size: 18px; font-weight: 700; margin-bottom: 10px;">
+                    Finalizado
                 </div>
-                <h2>AC9        - Modelo de Datos Robots de Soldadura</h2>
-                <p><b>Notas:</b> "La tarea con ID 20, ""Modelo de Datos Robots de Soldadura"", ha avanzado en su proceso inicial. Se ejecutó una primera visita a la planta y a la ubicación de la NAS asignada para consolidar información crítica. Actualmente, se han realizado las siguientes actividades clave:
-
-1. Se instaló y configuró un cliente de Node Js y PostgreSQL localmente para realizar pruebas con datos provenientes de la NAS.
-2. Se llevó a cabo la validación de los requisitos necesarios para el levantamiento de requerimientos a nivel de red, coordinado con el señor Oscar Nemojón.
-3. Se mantuvo una segunda reunión con Danny Richard enfocada en documentar requerimientos y desarrollar una estrategia para la extracción de muestras de datos. Sin embargo, se enfrenta la dificultad de que actualmente no es posible obtener esta información de muestra.
-
-Debido a esta limitación, se ha decidido priorizar el inicio de la gestión de conectividad como siguiente paso crítico para avanzar en el proyecto. El proyecto está cumpliendo con su planificación temporal, iniciando el 3 de junio de 2025 y con una fecha de conclusión prevista para el 13 de junio de 2025."</p>
-                <p><b>Inicio:</b> 2025-06-16 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-10-31</p>
+                <div class="task-label">Gerencia</div>
+                <div style="font-size: 16px;">
+                    Gerencia Logistica
+                </div>
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 100%</p>
-                    <p>Fecha Fin: 2025-03-27</p>
+    </div>
+    
+    <div class="double layout-left-text">
+        <div class="text-column">
+            <div class="text-content">
+                <div class="accent-line"></div>
+                <div class="task-code">AC9       </div>
+                <h2>Modelo de Datos Robots de Soldadura</h2>
+                <div class="task-info">
+                    <div class="task-label">Depósito</div>
+                    <div class="task-value">Cancelado</div>
                 </div>
-                <h2>AD7        - Modelo de datos Facturación AWS</h2>
-                <p><b>Notas:</b> La tarea 21 del proyecto, *Modelo de datos Facturación AWS*, está programada para ejecutarse entre el 3 y el 27 de marzo de 2025. Natalia Bouson ha solicitado la captura de datos desde un archivo Excel que registra el control de facturas asociadas a los servicios de AWS. Actualmente, el proyecto se encuentra en la fase de planificación y preparación, con el objetivo de asegurar que todos los datos necesarios para la captura estén disponibles y organizados de manera adecuada.
-
-Hasta ahora, el equipo de proyecto ha identificado la estructura del archivo Excel y ha evaluado la viabilidad técnica para la captura y consolidación de datos en un nuevo modelo diseñado para optimizar la administración de las facturas. Se han señalado algunos desafíos preliminares relacionados con la calidad y consistencia de los datos presentes en el archivo existente. Asimismo, se han discutido métodos para resolver estos problemas, como la implementación de revisiones automáticas de datos y la validación de la información antes de su incorporación en el nuevo modelo.
-
-Se ha acordado realizar reuniones periódicas para evaluar el progreso y asegurar que se avanza conforme a los plazos establecidos. Los responsables de la tarea son conscientes de la importancia de la precisión en la captura de los datos, dado el impacto directo que esto tiene en la gestión financiera de los recursos de AWS. Además, se están considerando herramientas de software que puedan facilitar el manejo de grandes volúmenes de información y mejorar la eficiencia del proceso de captura.
-
-En resumen, el proyecto avanza conforme a lo previsto, con un enfoque claro en la solución de problemas técnicos y la maximización de la precisión en el manejo de datos. Se mantienen las comunicaciones constantes entre los involucrados para asegurar el cumplimiento exitoso de los objetivos al cierre del período estipulado.</p>
-                <p><b>Inicio:</b> 2025-03-03 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-03-27</p>
+                <div class="task-info">
+                    <div class="task-label">Gerencia</div>
+                    <div class="task-value">Gerencia Ingenieria Y Mantenimiento</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 100.0%"></div>
+                </div>
+                <div class="percentage-badge">100%</div>
+                <div class="task-info">
+                    <div class="date-display">Inicio: 2025-06-16</div>
+                    <div class="date-display">Fin: 2025-09-12</div>
+                </div>
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 100%</p>
-                    <p>Fecha Fin: 2025-09-19</p>
-                </div>
-                <h2>AF1        - Cubo Archivo Compras Internacionales</h2>
-                <p><b>Notas:</b> El proyecto *Cubo Archivo Compras Internacionales* está actualmente en su etapa final, habiéndose concluido la entrega preliminar al usuario sin inconvenientes, y a la espera de la documentación de gobierno de datos para alcanzar su cierre formal. Desde su inicio el 11 de agosto de 2025, ha atravesado diversas fases. Durante la primera, se enfocó en realizar ajustes críticos para optimizar la estructura, el rendimiento y la calidad de la información, con mejoras significativas como la modificación de orden de campos, resolución de tiempos de carga y ajustes en columnas específicas.
-
-Posteriormente, a partir del 25 de agosto, se llevaron a cabo reuniones para comprender y documentar los requerimientos del cliente, Estefanía Pérez. Esto conllevó al desarrollo de un proceso ETL y la construcción del cubo de información correspondiente, permitiendo una organización estructurada de datos. En esta fase, se gestionaron 17 ajustes correctivos y evolutivos a través de GLPI, asegurando trazabilidad y control de cambios.
-
-El proyecto ahora se centra en dos actividades pendientes clave: la creación de documentación técnica y funcional, y la entrega oficial de los resultados al líder del área. Esto garantizará la formalización del trabajo, la continuidad operativa y la disponibilidad de información para futuras consultas o mejoras. Con una entrega preliminar exitosa, se confirma que los desarrollos están alineados con los requerimientos iniciales, posicionando el proyecto para su conclusión exitosa en las fechas pautadas.</p>
-                <p><b>Inicio:</b> 2025-08-11 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-08-29</p>
+        <div class="image-column">
+            <img src="../img/IMG_2797.JPEG" alt="Background">
+        </div>
+    </div>
+    
+    <div class="double layout-grid">
+        <div class="text-area">
+            <h2>Modelo de datos Facturación AWS</h2>
+            <div class="task-info">
+                <div class="task-label">Código</div>
+                <div class="task-value">AD7       </div>
+            </div>
+            <div class="task-info">
+                <div class="task-label">Notas</div>
+                <div class="task-value">..</div>
+            </div>
+            <div class="highlight-box">
+                <strong>Progreso:</strong> 100%<br>
+                <strong>Estado:</strong> Nuevo
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 75%</p>
-                    <p>Fecha Fin: 2025-10-03</p>
+        <div class="image-area-1">
+            <img src="../img/IMG_2799.JPEG" alt="Background">
+        </div>
+        <div class="image-area-2">
+            <div>
+                <div class="task-label">Depósito</div>
+                <div style="font-size: 18px; font-weight: 700; margin-bottom: 10px;">
+                    Finalizado
                 </div>
-                <h2>AF3        - PSI CBU</h2>
-                <p><b>Notas:</b> Actualmente, el proyecto PSI CBU está en proceso de ajuste para incluir un requerimiento añadido por el usuario líder, que no fue considerado en la entrega inicial desarrollada según las especificaciones del usuario funcional. Esta modificación se incorporará en el sprint actual. Adicionalmente, el proyecto está a la espera de la elaboración de la documentación de gobierno de datos y la correspondiente documentación técnica y funcional del trabajo ya realizado.
-
-El proyecto comenzó con reuniones iniciales para comprender el proceso y recolectar información necesaria para las métricas solicitadas por Estefanía Pérez. Este análisis permitió desarrollar un proceso de ETL que consolidó y preparó los datos para su posterior análisis. Una entrega preliminar fue realizada al usuario responsable para validación de cumplimiento con los requisitos.
-
-Hasta la fecha, el proyecto ha avanzado aproximadamente un 40%, basado en reuniones con Estefanía Pérez López para revisar y ajustar los requerimientos iniciales, alineando criterios y aplicando correcciones necesarias para el progreso del mismo. El proyecto aún requiere la entrega formal de los desarrollos al líder del área para garantizar su cierre formal y correcta trazabilidad.</p>
-                <p><b>Inicio:</b> 2025-08-11 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-08-29</p>
+                <div class="task-label">Gerencia</div>
+                <div style="font-size: 16px;">
+                    Gerencia De Informatica
+                </div>
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 83%</p>
-                    <p>Fecha Fin: 2025-10-03</p>
+    </div>
+    
+    <div class="double layout-right-text">
+        <div class="text-column">
+            <div class="text-content">
+                <h2>Cubo Archivo Compras Internacionales</h2>
+                <div class="divider"></div>
+                <div class="task-label">Código: AF1       </div>
+                <div class="task-info">
+                    <strong>Estado:</strong> Nuevo
                 </div>
-                <h2>AE7        - Modelo de Datos Movimientos IVA - Cubo Movimiento Impuestos</h2>
-                <p><b>Notas:</b> El proyecto de creación de un cubo de datos para automatizar la revisión tributaria de registros contables vinculados a cuentas de impuestos se encuentra en la fase de validaciones y pruebas. Inicialmente, se identificó la necesidad de optimizar las revisiones realizadas manualmente a partir de reportes SQL, proceso que es intensivo en tiempo y recursos. Para solventar esto, se desarrolló un modelo de datos junto con un proceso de ETL, con el objetivo de integrar las reglas de validación existentes y facilitar la identificación automática de registros correctos e incorrectos.
-
-Las actividades previas incluyeron varias reuniones para entender detalladamente la metodología de revisión de impuestos y los procesos actuales, lo que permitió estructurar un modelo alineado con los requerimientos y lineamientos establecidos durante el análisis. En la etapa inicial también se explicó el manejo de autorretenciones y otras revisiones clave, identificando áreas de mejora como la automatización parcial de ciertos cálculos.
-
-Actualmente, el levantamiento de requerimientos para el proceso de impuestos de ventas está completo, mientras que el de compras se prevé finalizar pronto. Se han programado reuniones periódicas para presentar avances y recibir retroalimentación, asegurando que los requerimientos del negocio se reflejen adecuadamente en la solución final. El enfoque ahora está en garantizar la calidad e integridad de la información mediante pruebas detalladas, trabajando en colaboración con el área de impuestos.</p>
-                <p><b>Inicio:</b> 2025-06-03 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-09-27</p>
+                <div class="task-info">
+                    <strong>Notas:</strong><br>
+                </div>
+                <div class="task-info">
+                    <strong>Progreso:</strong> 100%
+                </div>
+                <div class="task-info">
+                    <div class="date-display">Entrega: 2025-08-29</div>
+                </div>
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 100%</p>
-                    <p>Fecha Fin: 2025-09-19</p>
+        <div class="image-column">
+            <img src="../img/IMG_3073.JPEG" alt="Background">
+        </div>
+    </div>
+    
+    <div class="double layout-left-text">
+        <div class="text-column">
+            <div class="text-content">
+                <div class="accent-line"></div>
+                <div class="task-code">AF3       </div>
+                <h2>PSI CBU</h2>
+                <div class="task-info">
+                    <div class="task-label">Depósito</div>
+                    <div class="task-value">Finalizado</div>
                 </div>
-                <h2>AC5        - Inventario Cierre de Mes</h2>
-                <p><b>Notas:</b> "El proyecto ""Inventario Cierre de Mes"" está avanzando de acuerdo con el cronograma establecido, con una finalización prevista para el 13 de junio de 2025. Actualmente, se están realizando modificaciones en el proceso de Extracción, Transformación y Carga (ETL) en SSIS para incorporar nuevas columnas al modelo de datos, tras una reunión decisiva con Glisnaidy Montoya, en la que se acordó esta mejora. Durante el sprint iniciado el 19 de mayo de 2025, se llevaron a cabo actividades clave, incluyendo colaboraciones continuas con Glisnaidy para resolver dudas y definir las reglas de negocio pertinentes al modelo de movimiento de producto. Además, se generó un reporte esencial para la migración de movimientos por ubicación, un requisito para el reinicio del sistema Navision. En paralelo, se coordinó con Mauricio Valencia para esclarecer procedimientos sobre el reseteo de tablas en Navision, revisando el estado del proceso de cierre y evaluando su impacto potencial en las operaciones de la bodega. El proyecto se está ejecutando conforme a las expectativas con atención tanto técnica como funcional para asegurar el éxito del cierre mensual del inventario."</p>
-                <p><b>Inicio:</b> 2025-05-19 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-07-31</p>
+                <div class="task-info">
+                    <div class="task-label">Gerencia</div>
+                    <div class="task-value">Gerencia Logistica</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 100.0%"></div>
+                </div>
+                <div class="percentage-badge">100%</div>
+                <div class="task-info">
+                    <div class="date-display">Inicio: 2025-08-11</div>
+                    <div class="date-display">Fin: 2025-10-03</div>
+                </div>
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 75%</p>
-                    <p>Fecha Fin: 2025-10-03</p>
-                </div>
-                <h2>AC7        - precios de transferencia anual (requerimiento NAV REQ_001046 2019)</h2>
-                <p><b>Notas:</b> La tarea relacionada con los precios de transferencia anual, parte del requerimiento NAV REQ_001046 de 2019, ha progresado con reuniones programadas con Glisnaidy Montoya, aprovechando el cubo de movimientos de producto. Se ha avanzado en la construcción de una parte del requerimiento. Sin embargo, se identificó una sección del proceso que actualmente se realiza manualmente y cuya automatización es incierta. Se está evaluando la factibilidad de automatizarla para mejorar la eficiencia del proceso. El proyecto sigue dentro del calendario previsto, con fecha de inicio el 8 de septiembre de 2025 y finalización estimada para el 19 de septiembre de 2025.</p>
-                <p><b>Inicio:</b> 2025-06-02 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-06-27</p>
+        <div class="image-column">
+            <img src="../img/IMG_2792.JPEG" alt="Background">
+        </div>
+    </div>
+    
+    <div class="double layout-full-overlay">
+        <div class="background-image">
+            <img src="../img/IMG_3052.JPEG" alt="Background">
+        </div>
+        <div class="gradient-overlay"></div>
+        <div class="content-box">
+            <h2>
+                Inventario
+                <span class="red-accent">Cierre de Mes</span>
+            </h2>
+            <div class="task-info" style="font-size: 16px; margin-bottom: 15px;">
+                <strong>Código:</strong> AC5       
+            </div>
+            <div class="task-info">
+                <strong>Depósito:</strong> Finalizado
+            </div>
+            <div class="task-info">
+                <strong>Estado:</strong> Planeado
+            </div>
+            <div class="percentage-badge" style="margin-top: 20px; font-size: 18px;">
+                100%
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 96%</p>
-                    <p>Fecha Fin: 2025-10-03</p>
+    </div>
+    
+    <div class="double layout-left-text">
+        <div class="text-column">
+            <div class="text-content">
+                <div class="accent-line"></div>
+                <div class="task-code">AC2       </div>
+                <h2>Análisis Migración Nube( Prueba Runt - AWS - Azure Fabric)</h2>
+                <div class="task-info">
+                    <div class="task-label">Depósito</div>
+                    <div class="task-value">Finalizado</div>
                 </div>
-                <h2>AC2        - Análisis Migración Nube( Prueba Runt - AWS - Azure Fabric)</h2>
-                <p><b>Notas:</b> El proyecto de Análisis de Migración a la Nube tiene como objetivo evaluar diferentes alternativas de infraestructura en la nube para los servicios actualmente alojados en ETIX, considerando tanto modelos 100% en la nube como híbridos. A lo largo de su desarrollo, se han realizado varios avances significativos:
-
-1. **Estudio y Documentación**: Se completaron estudios sobre Azure Fundamentals y se consolidaron documentos que comparan costos entre Azure, AWS y la infraestructura actual en ETIX. Los cálculos de costos específicos para Azure (modelo Azure + Fabric F16) se finalizaron, y se han documentado estimaciones financieras completas. 
-
-2. **Laboratorios y Pruebas**: Se han iniciado y están en progreso pruebas con laboratorios en la nube, específicamente en Azure, usando una licencia de prueba activada el 7 de julio. Se prevé el levantamiento de un laboratorio completo, estableciendo un entorno de pruebas para el RUNT en Azure, mientras el equivalente en AWS aún no ha sido iniciado.
-
-3. **Colaboración y Reuniones**: Se realizaron reuniones con asesores de AWS y Microsoft para afinar modelos de costos y discutir configuraciones recomendadas de acuerdo a la arquitectura actual de ETIX. También se han manejado reuniones internas para decidir sobre el tipo de cuenta a utilizar en el laboratorio Azure + Fabric, y se ha compartido un diagrama explicativo de la estructura propuesta.
-
-4. **Ajustes y Mejoras**: Durante el proceso, se detectaron inconvenientes como la carga manual necesaria para integrar datos desde SharePoint a Azure. Además, se está considerando la adición de Power Automate para mejorar procesos actuales que operan con OneDrive y correos electrónicos.
-
-Actualmente, el equipo se concentra en completar la documentación de costos con la integración de Power Automate y finalizar las etapas de prueba de los laboratorios para determinar la mejor opción de migración hacia la nube que contemple aspectos de costo, escalabilidad, seguridad, cumplimiento, facilidad de integración y soporte técnico.</p>
-                <p><b>Inicio:</b> 2025-02-03 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-08-29</p>
+                <div class="task-info">
+                    <div class="task-label">Gerencia</div>
+                    <div class="task-value">Gerencia De Informatica</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 100.0%"></div>
+                </div>
+                <div class="percentage-badge">100%</div>
+                <div class="task-info">
+                    <div class="date-display">Inicio: 2025-02-03</div>
+                    <div class="date-display">Fin: 2025-11-21</div>
+                </div>
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 75%</p>
-                    <p>Fecha Fin: 2025-10-03</p>
-                </div>
-                <h2>AB3        - Recordatorios de próximos mantenimientos a cliente</h2>
-                <p><b>Notas:</b> El proyecto se centra en el desarrollo de un sistema de recordatorios de mantenimientos para clientes, utilizando un modelo predictivo entrenado con datos históricos. Inicialmente, se sostuvo una reunión con el cliente donde se validaron los requisitos y se adquirieron documentos base necesarios para comenzar la solución. A partir de ahí, se elaboró un modelo de datos en el Data Warehouse (DWH) utilizando código fuente basado en la documentación de tesis de Andrés Vanegas. La construcción del modelo permitió identificar los insumos de datos necesarios.
-
-En la segunda fase, se llevó a cabo la creación y carga de una dimensión de ítem del grupo de servicio para obtener la frecuencia de mantenimiento. Se realizaron pruebas de entrenamiento del modelo usando una muestra de datos seleccionada, que comprendían 74,000 registros de motocicletas con características específicas de mantenimiento. El modelo resultante mostró un alto grado de precisión, con un R cuadrado superior al 95% y un error medio cercano a 1.
-
-Actualmente, está programada una reunión de revisión para el 19 de septiembre con Andrés Vanegas para validar el modelo final. En caso de aprobación, se procederá a la creación del acta de entrega. La carga de datos de los últimos períodos asociados a mantenimientos está en curso, lo que permitirá completar el entrenamiento inicial del modelo. El proyecto avanza de acuerdo al cronograma establecido y se encuentra en una fase crítica de validación previa a su entrega final.
-</p>
-                <p><b>Inicio:</b> 2025-08-11 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-09-16</p>
+        <div class="image-column">
+            <img src="../img/IMG_2799.JPEG" alt="Background">
+        </div>
+    </div>
+    
+    <div class="double layout-grid">
+        <div class="text-area">
+            <h2>Recordatorios de próximos mantenimientos a cliente</h2>
+            <div class="task-info">
+                <div class="task-label">Código</div>
+                <div class="task-value">AB3       </div>
+            </div>
+            <div class="task-info">
+                <div class="task-label">Notas</div>
+                <div class="task-value">..</div>
+            </div>
+            <div class="highlight-box">
+                <strong>Progreso:</strong> 100%<br>
+                <strong>Estado:</strong> Planeado
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 88%</p>
-                    <p>Fecha Fin: 2025-10-03</p>
+        <div class="image-area-1">
+            <img src="../img/IMG_3052.JPEG" alt="Background">
+        </div>
+        <div class="image-area-2">
+            <div>
+                <div class="task-label">Depósito</div>
+                <div style="font-size: 18px; font-weight: 700; margin-bottom: 10px;">
+                    Finalizado
                 </div>
-                <h2>AC3        - Modelo de Datos Heisonh (Visión 360 TH)</h2>
-                <p><b>Notas:</b> El proyecto *Modelo de Datos Heisonh (Visión 360 TH)* se encuentra avanzando con reuniones y actividades de preparación y análisis que involucran la actualización y gestión de tableros analíticos en el área de talento humano. Actualmente, hay cuatro tableros activos: Informe Recursos Humanos, Informe Rotación de Personal, Informe Procesos de Selección e Informe Solicitudes MC Empleados, vinculados a un único modelo semántico basado en diez tablas de dimensión y hechos en la base de datos DWH_INCOLMOTOS, esquema *rrhh*. 
-
-Se han identificado las ETL necesarias y se está validando la identificación de tablas y procesos de carga relacionados. Las reuniones iniciales para el entendimiento de la herramienta Heinsohn han concluido, y se continúan programando encuentros para obtener detalles críticos sobre los informes existentes en gestión de talento humano. 
-
-Las prioridades se han ajustado en función de la disponibilidad de recursos clave, como Ramón Zapata, para asegurar un uso óptimo del tiempo. Las interacciones con Santiago Ortiz buscan enriquecer el conocimiento sobre los aplicativos actuales de gestión del desempeño y la visión a implementar. Se ha demostrado enfoque en la consolidación del modelo de datos y la efectividad de las reuniones con partes interesadas.</p>
-                <p><b>Inicio:</b> 2025-08-11 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-10-31</p>
+                <div class="task-label">Gerencia</div>
+                <div style="font-size: 16px;">
+                    Gerencia Servicio Al Cliente
+                </div>
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 89%</p>
-                    <p>Fecha Fin: 2025-09-19</p>
+    </div>
+    
+    <div class="double layout-left-text">
+        <div class="text-column">
+            <div class="text-content">
+                <div class="accent-line"></div>
+                <div class="task-code">AC3       </div>
+                <h2>Modelo de Datos Sociodemográficos Empleados</h2>
+                <div class="task-info">
+                    <div class="task-label">Depósito</div>
+                    <div class="task-value">Finalizado</div>
                 </div>
-                <h2>AC4        - Extracción Datos Pilot para  Lead</h2>
-                <p><b>Notas:</b> El proyecto de extracción de datos para Pilot ha experimentado diversos avances y desafíos en sus diferentes fases. Inicialmente, se realizaron reuniones clave con los responsables del sistema Pilot, incluido Juan Pablo Cañas, para comprender el proceso actual de generación de archivos de leads y discutir el acceso a la API. Sin embargo, se han identificado varias dificultades, como la exclusión de información de distribuidores durante la extracción de datos y la falta de estandarización del campo *Producto de interés*. Estos problemas han impedido la finalización del modelo de datos, a pesar de que su desarrollo está en curso.
-
-Se realizaron esfuerzos para resolver estos inconvenientes, incluyendo la creación de un ticket para escalar el problema con Pilot, pero este fue cerrado sin resolución. Posteriormente, se envió un correo solicitando aclaraciones sobre los Acuerdos de Nivel de Servicio (ANS) de Pilot. Asimismo, las reuniones con los proveedores han sido programadas para discutir la estandarización de los nombres de productos y otros aspectos técnicos.
-
-Durante el proceso, se han brindado capacitaciones sobre la creación de dimensiones en Integration Services y se han realizado extracciones y análisis detallados de los datos disponibles. Sin embargo, el campo de contractibilidad sigue siendo un obstáculo, ya que es crucial para el envío de encuestas a los clientes.
-
-El proyecto, aunque en progreso, está parcialmente detenido hasta que Pilot proporcione respuestas necesarias para avanzar en la estandarización y completar las actividades pendientes.</p>
-                <p><b>Inicio:</b> 2025-05-06 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-06-30</p>
+                <div class="task-info">
+                    <div class="task-label">Gerencia</div>
+                    <div class="task-value">Gerencia De Talento Humano</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 100.0%"></div>
+                </div>
+                <div class="percentage-badge">100%</div>
+                <div class="task-info">
+                    <div class="date-display">Inicio: 2025-08-11</div>
+                    <div class="date-display">Fin: 2025-10-03</div>
+                </div>
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 0%</p>
-                    <p>Fecha Fin: 2025-10-03</p>
+        <div class="image-column">
+            <img src="../img/IMG_2797.JPEG" alt="Background">
+        </div>
+    </div>
+    
+    <div class="double layout-left-text">
+        <div class="text-column">
+            <div class="text-content">
+                <div class="accent-line"></div>
+                <div class="task-code">AA1       </div>
+                <h2>Tabla Proyección Stock (MOS)</h2>
+                <div class="task-info">
+                    <div class="task-label">Depósito</div>
+                    <div class="task-value">Finalizado</div>
                 </div>
-                <h2>AE8        - Informes de calidad proveedores como evaluaciones, evaluación de desempeño proveedores, reclamos de calidad y su respuesta</h2>
-                <p><b>Notas:</b> None</p>
-                <p><b>Inicio:</b> 2025-09-22 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-07-26</p>
+                <div class="task-info">
+                    <div class="task-label">Gerencia</div>
+                    <div class="task-value">Gerencia Logistica</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 100.0%"></div>
+                </div>
+                <div class="percentage-badge">100%</div>
+                <div class="task-info">
+                    <div class="date-display">Inicio: 2025-09-08</div>
+                    <div class="date-display">Fin: 2025-10-31</div>
+                </div>
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 37%</p>
-                    <p>Fecha Fin: 2025-12-26</p>
+        <div class="image-column">
+            <img src="../img/IMG_3073.JPEG" alt="Background">
+        </div>
+    </div>
+    
+    <div class="double layout-center-margins">
+        <div class="left-margin">
+            <div class="margin-text">AC4       </div>
+        </div>
+        <div class="center-content">
+            <div class="image-container">
+                <img src="../img/IMG_3052.JPEG" alt="Background">
+                <div class="text-overlay">
+                    <h2>Extracción Datos Pilot para  Lead</h2>
+                    <div class="task-info">
+                        <strong>Planeado</strong> - 100%
+                    </div>
+                    <div class="task-info">
+                        ...
+                    </div>
                 </div>
-                <h2>AC1        - Estrategia Gobierno de Datos</h2>
-                <p><b>Notas:</b> El proyecto *Estrategia Gobierno de Datos* para Incolmotos Yamaha tiene como objetivo mejorar el gobierno de datos mediante un plan de acción estructurado que aborda la gestión de datos maestros, seguridad, trazabilidad, auditoría y calidad de los datos. Desde su inicio, se han identificado y empezado a abordar diversas brechas en roles, permisos, documentación, calidad y gobernanza de la información.
-
-Se han realizado reuniones con proveedores como DataKnow, Qlik, e Informatica para evaluar herramientas y servicios que puedan complementar o mejorar el sistema actual; estas discusiones se centraron en obtener cotizaciones ajustadas y la evaluación técnica precisa de las soluciones ofrecidas, destacando elementos como linaje de datos, visualización, catalogación y modelos de consumo basados en tokens.
-
-En cuanto a accesos y permisos, se han establecido mejores prácticas, como la implementación de una lista formal de solicitudes de acceso a bases de datos, y se ha clasificado a los usuarios para conceder privilegios mínimos necesarios con el fin de fortalecer el control y cumplimiento de políticas de gobernanza.
-
-Paralelamente, se ha trabajado en el desarrollo de una intranet corporativa utilizando SharePoint, estructurando jerarquías de carpetas y documentación relacionada con la gestión de la base de datos, a la vez que se ha avanzado en la estandarización y reorganización de roles en las bases de datos para mejorar la gestión y seguridad de la información.
-
-Se han organizado espacios de capacitación sobre gobierno de datos para los colaboradores de la compañía, estructurando contenidos y alineando esfuerzos de comunicación mediante cápsulas informativas y plataformas educativas como Edukando.
-
-En el ámbito técnico, se han documentado procesos y se han identificado y unificado estructuras redundantes en el Data Warehouse, promoviendo la calidad y consistencia de los datos. La colaboración con el equipo de Infraestructura de Datos ha sido clave para alinear conceptos técnicos y avanzar en el análisis inicial de plataformas existentes como Navision.
-
-El proyecto ha demostrado un proceso constante de revisión y ajuste, mejorando la estructura organizativa y funcional del gobierno de datos en la empresa.</p>
-                <p><b>Inicio:</b> 2025-03-12 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2026-01-29</p>
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 80%</p>
-                    <p>Fecha Fin: 2025-10-03</p>
-                </div>
-                <h2>AA5        - Indicador OTIF (In Full On Time) Proveedores Repuestos</h2>
-                <p><b>Notas:</b> El proyecto *Indicador OTIF (In Full On Time) Proveedores Repuestos* avanza conforme a lo planificado, con un enfoque en la construcción y validación del modelo de datos que permitirá la generación de reportes en Power BI. Hasta la fecha, se ha desarrollado el modelo inicial del indicador OTIF para proveedores de repuestos. 
-
-Se llevaron a cabo reuniones clave: una inicial con Jaksson para mapear y identificar fuentes de información existentes en el Data Warehouse, y otra con Simón para obtener y manejar el archivo de la hoja LT, esencial para el proceso de creación y actualización del modelo. Posteriormente, el modelo se entregó a Juan Carlos, con quien se abordó la manera de mapear campos desde Excel.
-
-En una segunda etapa, se entregó el modelo de datos a Juan Carlos para la construcción del reporte en Power BI. Simón participó en la verificación de la completitud del modelo, confirmando la inclusión de todos los campos requeridos y la concordancia de la información con el sistema Navisión. Durante esta validación, se notificó que el ajuste en el campo de fecha de entrega en el sistema Navisión tuvo que ser revertido debido a su impacto en la creación de productos.
-
-Adicionalmente, se programó una reunión para socializar y formalizar el uso del Excel oficial, en concordancia con las prácticas del Gobierno de Datos.
-
-La colaboración con los involucrados es continua y se procede conforme a las necesidades identificadas, asegurando que el modelo de datos sea robusto y apto para el propósito planificado.</p>
-                <p><b>Inicio:</b> 2025-07-07 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-07-31</p>
+        <div class="right-margin">
+            <div class="margin-text">PROYECTO</div>
+        </div>
+    </div>
+    
+    <div class="double layout-full-overlay">
+        <div class="background-image">
+            <img src="../img/IMG_0283.JPEG" alt="Background">
+        </div>
+        <div class="gradient-overlay"></div>
+        <div class="content-box">
+            <h2>
+                Informes
+                <span class="red-accent">de calidad proveedores como evaluaciones, evaluación de desempeño proveedores, reclamos de calidad y su respuesta</span>
+            </h2>
+            <div class="task-info" style="font-size: 16px; margin-bottom: 15px;">
+                <strong>Código:</strong> AE8       
+            </div>
+            <div class="task-info">
+                <strong>Depósito:</strong> Finalizado
+            </div>
+            <div class="task-info">
+                <strong>Estado:</strong> Nuevo
+            </div>
+            <div class="percentage-badge" style="margin-top: 20px; font-size: 18px;">
+                100%
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 50%</p>
-                    <p>Fecha Fin: 2025-10-03</p>
+    </div>
+    
+    <div class="double layout-diagonal">
+        <div class="diagonal-bg"></div>
+        <div class="content-wrapper">
+            <div class="text-section">
+                <div class="task-code" style="color: var(--accent-red);">AA5       </div>
+                <h2>Indicador OTIF (In Full On Time) Proveedores Repuestos</h2>
+                <div class="task-info">
+                    <strong>Depósito:</strong> Finalizado
                 </div>
-                <h2>AA6        - Modelo de aprobación de créditos y limite de incremento</h2>
-                <p><b>Notas:</b> El proyecto *Modelo de aprobación de créditos y límite de incremento* tuvo su inicio el 8 de septiembre de 2025 y está programado para finalizar el 19 de septiembre de 2025. Hasta el momento, se ha realizado una reunión con Jonathan Idarraga y Viviana Betancur para analizar el proceso actual de los indicadores financieros que se emplean en la evaluación de cupos y aumentos de crédito. Con base en esta reunión, se desarrolló un modelo de datos y se están llevando a cabo los trabajos de construcción de la ETL.
-
-Además, se brindó asistencia a Juan Pablo para comprender la solución propuesta y se realizó una validación conjunta de la tabla fact, la cual se utilizará para almacenar la información de los documentos del cliente en el Data Warehouse. Se ha elaborado documentación de requerimientos, la cual se presentará a Viviana Betancur el 22 de septiembre. En esta reunión se espera validar la información extraída, así como dar seguimiento y realizar ajustes según lo que considere necesario el cliente. 
-
-El proyecto avanza de acuerdo al cronograma planificado, centrado tanto en el desarrollo técnico del modelo de datos y de la ETL, como en la alineación documental y de requerimientos con el cliente.</p>
-                <p><b>Inicio:</b> 2025-09-08 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-05-30</p>
+                <div class="task-info">
+                    <strong>Gerencia:</strong> Gerencia Logistica
+                </div>
+                <div class="percentage-badge">100% Completado</div>
+            </div>
+            <div class="image-section">
+                <img src="../img/IMG_0283.JPEG" alt="Background">
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 100%</p>
-                    <p>Fecha Fin: 2025-09-19</p>
+    </div>
+    
+    <div class="double layout-diagonal">
+        <div class="diagonal-bg"></div>
+        <div class="content-wrapper">
+            <div class="text-section">
+                <div class="task-code" style="color: var(--accent-red);">AE6       </div>
+                <h2>Integración Estado Entrega Transportadoras</h2>
+                <div class="task-info">
+                    <strong>Depósito:</strong> Finalizado
                 </div>
-                <h2>AE2        - Modelo de Indicadores para Gestión del Centro de Partes</h2>
-                <p><b>Notas:</b> El proyecto *Modelo de Indicadores para Gestión del Centro de Partes* se encuentra orientado a automatizar y mejorar la visualización de los indicadores clave de desempeño del Centro de Partes, responsable de la distribución de repuestos de motocicletas e instrumentos musicales. Actualmente, los indicadores se calculan manualmente, lo cual es una carga operativa significativa y afecta tanto la frecuencia como la confiabilidad del seguimiento. La propuesta es desarrollar un modelo de datos integrado para visualizar los indicadores de forma automatizada y actualización semanal a través de Power BI, mejorando la toma de decisiones operativas y estratégicas, y cumpliendo los estándares de evaluación de la casa matriz en Japón.
-
-Se han planeado siete módulos principales: Facturación, Capacidad, Radio Logístico COS, Productividad, Inbound, Outbound y Precisión en las Órdenes. La implementación se basa en insumos de reportes existentes, como Gestión Venta Repuestos, Gráfico Líneas Despachadas, Ejecución Presupuesto Detallado y Listado Causa Devoluciones. La planificación inicial incluye la creación de un cronograma con la entrega de dos módulos iniciales dentro del año 2025. 
-
-El proyecto inició el 8 de septiembre de 2025, y su finalización está prevista para el 19 de septiembre de 2025. En la etapa actual, se está revisando el material entregado por el cliente para iniciar el desarrollo. La entrega provisional del cronograma permite estructurar el flujo de trabajo para asegurar el cumplimiento de los plazos con un enfoque en la calidad del producto final.</p>
-                <p><b>Inicio:</b> 2025-09-08 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-10-31</p>
+                <div class="task-info">
+                    <strong>Gerencia:</strong> Gerencia Logistica
+                </div>
+                <div class="percentage-badge">100% Completado</div>
+            </div>
+            <div class="image-section">
+                <img src="../img/IMG_5070.JPEG" alt="Background">
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 50%</p>
-                    <p>Fecha Fin: 2025-10-03</p>
-                </div>
-                <h2>AA1        - Tabla Proyección Stock (MOS)</h2>
-                <p><b>Notas:</b> La tarea *Tabla Proyección Stock (MOS)* se encuentra en desarrollo con un período planificado del 8 al 19 de septiembre de 2025. Hasta la fecha, se ha llevado a cabo una reunión de entendimiento con el cliente, Natyhelem Gil, el 16 de septiembre, en la cual se definieron claramente las necesidades del cliente y se discutieron las reglas de negocio relevantes. A partir de esta reunión, se ha elaborado la documentación de requerimientos correspondiente. Se ha programado una nueva reunión para el 22 de septiembre, con el objetivo de presentar esta documentación al cliente y obtener aprobación o recibir observaciones adicionales. El proyecto avanza conforme al cronograma establecido, asegurando la alineación entre el equipo de desarrollo y el cliente respecto a los entregables y los requisitos funcionales.</p>
-                <p><b>Inicio:</b> 2025-09-08 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-03-28</p>
+    </div>
+    
+    <div class="double layout-grid">
+        <div class="text-area">
+            <h2>Streaming for Import's Receiving Process</h2>
+            <div class="task-info">
+                <div class="task-label">Código</div>
+                <div class="task-value">AB6       </div>
+            </div>
+            <div class="task-info">
+                <div class="task-label">Notas</div>
+                <div class="task-value">..</div>
+            </div>
+            <div class="highlight-box">
+                <strong>Progreso:</strong> 100%<br>
+                <strong>Estado:</strong> Planeado
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 0%</p>
-                    <p>Fecha Fin: 2025-12-26</p>
+        <div class="image-area-1">
+            <img src="../img/IMG_1106.JPEG" alt="Background">
+        </div>
+        <div class="image-area-2">
+            <div>
+                <div class="task-label">Depósito</div>
+                <div style="font-size: 18px; font-weight: 700; margin-bottom: 10px;">
+                    Finalizado
                 </div>
-                <h2>AC8        - Migración reportes a DWH</h2>
-                <p><b>Notas:</b> None</p>
-                <p><b>Inicio:</b> 2025-04-01 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-12-26</p>
+                <div class="task-label">Gerencia</div>
+                <div style="font-size: 16px;">
+                    Gerencia Logistica
+                </div>
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 100%</p>
-                    <p>Fecha Fin: 2025-07-31</p>
-                </div>
-                <h2>AE6        - Integración Estado Entrega Transportadoras</h2>
-                <p><b>Notas:</b> El proyecto *Integración Estado Entrega Transportadoras* ha tenido avances y desafíos significativos en la colaboración con varios proveedores de servicios de entrega. Hasta el momento, los proveedores Transprensa y Servientrega están operativos y han logrado la validación de cargas con éxito. Sin embargo, el proveedor AlDia todavía no ha confirmado la posibilidad de consumir su lista de guías a través de una API, y se está a la espera de una respuesta que se espera la próxima semana. Rápido Ochoa no ha proporcionado aún un API o webservice accesible, lo que ha retrasado el avance por su lado.
-
-En las etapas iniciales, se llevaron a cabo reuniones con el representante Pablo Betancur y proveedores clave para aclarar dudas sobre el seguimiento de guías y mejorar la precisión de los estados registrados. Se propuso una homologación de estados para estandarizar el proceso.
-
-Hubo un progreso en la resolución de problemas con AlDia mediante la obtención de un rango oficial de guías para mejorar la eficiencia operativa y facilitar el consumo de API. No obstante, estas mejoras no han sido implementadas completamente por el negocio.
-
-Para Transprensa, a pesar de haber obtenido acceso a su API, las pruebas revelaron que la información era limitada o desactualizada, por lo que se decidió realizar un scraping para obtener los datos necesarios. Los históricos estándar con los estatus regularizados se han insertado desde principios de año para Transprensa.
-
-El proyecto enfrenta el reto de recibir las configuraciones API adecuadas de AlDia y Rápido Ochoa, y de integrar estos datos en el sistema destino para un seguimiento eficiente y automatizado de las guías. Mientras tanto, se continúa trabajando en las soluciones propuestas y en facilitar las comunicaciones entre todas las partes involucradas para superar las limitaciones actuales.</p>
-                <p><b>Inicio:</b> 2025-06-03 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-07-31</p>
+    </div>
+    
+    <div class="double layout-full-overlay">
+        <div class="background-image">
+            <img src="../img/IMG_1837.JPEG" alt="Background">
+        </div>
+        <div class="gradient-overlay"></div>
+        <div class="content-box">
+            <h2>
+                Migración
+                <span class="red-accent">Procesos Centro de Partes</span>
+            </h2>
+            <div class="task-info" style="font-size: 16px; margin-bottom: 15px;">
+                <strong>Código:</strong> AA3       
+            </div>
+            <div class="task-info">
+                <strong>Depósito:</strong> Cancelado
+            </div>
+            <div class="task-info">
+                <strong>Estado:</strong> Planeado
+            </div>
+            <div class="percentage-badge" style="margin-top: 20px; font-size: 18px;">
+                100%
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 0%</p>
-                    <p>Fecha Fin: 2025-05-30</p>
+    </div>
+    
+    <div class="double layout-right-text">
+        <div class="text-column">
+            <div class="text-content">
+                <h2>CSA218</h2>
+                <div class="divider"></div>
+                <div class="task-label">Código: AB9       </div>
+                <div class="task-info">
+                    <strong>Estado:</strong> Planeado
                 </div>
-                <h2>AC6        - Liquidación de Costos Logísticos de las Importaciones</h2>
-                <p><b>Notas:</b> El proyecto de *Liquidación de Costos Logísticos de las Importaciones* tiene como objetivo automatizar la información relacionada con los costos logísticos vinculados a las compras de inventario de proveedores extranjeros, con el fin de optimizar tiempos y reducir errores potenciales en los cálculos manuales. Este proceso está diseñado para consumir una inversión de tiempo de 40 horas mensuales. 
-
-Hasta el momento, se ha avanzado en la identificación de las etapas críticas del proceso logístico, así como en el diseño preliminar del sistema que permitirá la automatización. Se ha identificado la necesidad de integrar diferentes plataformas de software que manejan los datos de costos actuales, y se están explorando soluciones tecnológicas que ofrecen capacidades de integración robusta.
-
-Sin embargo, se han presentado algunas dificultades en la estandarización de los formatos de datos provenientes de distintos proveedores, lo que ha requerido ajustes en el cronograma de trabajo. Los equipos han llegado a un consenso sobre la metodología a seguir para garantizar la interoperabilidad de los sistemas a utilizar, lo que implica la revisión de algunos de los procesos internos de gestión de datos. 
-
-El equipo se encuentra actualmente trabajando en colaboración con el departamento de TI para resolver estas discrepancias y asegurar que las soluciones propuestas sean satisfactorias tanto en funcionalidad como en eficiencia operativa. Las partes interesadas internas se mantienen informadas sobre los avances y desafíos del proyecto. El cronograma sigue siendo viable, con ajustes menores contemplados para abordar las dificultades actuales.</p>
-                <p><b>Inicio:</b> 2025-05-05 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-05-30</p>
+                <div class="task-info">
+                    <strong>Notas:</strong><br>
+                </div>
+                <div class="task-info">
+                    <strong>Progreso:</strong> 100%
+                </div>
+                <div class="task-info">
+                    <div class="date-display">Entrega: 2025-06-17</div>
+                </div>
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 0%</p>
-                    <p>Fecha Fin: 2025-06-27</p>
+        <div class="image-column">
+            <img src="../img/IMG_2799.JPEG" alt="Background">
+        </div>
+    </div>
+    
+    <div class="double layout-right-text">
+        <div class="text-column">
+            <div class="text-content">
+                <h2>PLAN DE ESTUDIO</h2>
+                <div class="divider"></div>
+                <div class="task-label">Código:           </div>
+                <div class="task-info">
+                    <strong>Estado:</strong> Planeado
                 </div>
-                <h2>AA7        - Data Modeling for Technical Services at Points of Sale (POS)</h2>
-                <p><b>Notas:</b> "El proyecto actual se centra en la creación de un plan de estudio. A lo largo de su ejecución, se han identificado varios puntos clave para su avance. En las etapas iniciales se ha establecido una estructura básica para el plan de estudio que incluye objetivos claros, contenido específico y metodología de enseñanza. Se han llevado a cabo reuniones regulares para discutir avances y se han alcanzado acuerdos sobre los recursos necesarios, incluyendo herramientas digitales y materiales didácticos.
-
-Sin embargo, el proyecto ha enfrentado algunas dificultades, principalmente relacionadas con la coordinación entre diferentes equipos y la alineación de horarios para asegurar la participación de todos los involucrados en las reuniones de planificación. Estas dificultades están en proceso de resolución mediante el uso de plataformas de gestión de proyectos que facilitan la colaboración y el seguimiento del progreso.
-
-Hasta la fecha, se ha completado aproximadamente el 60% del desarrollo del contenido del plan de estudio. Se están implementando ajustes para mejorar la integración de feedback recibido y se han definido las métricas para evaluar la efectividad del plan una vez implementado.
-
-En conclusión, el proyecto avanza conforme al cronograma establecido, con desafíos logísticos en proceso de resolución y un enfoque constante hacia la calidad del contenido y la eficacia del plan de estudio."</p>
-                <p><b>Inicio:</b> 2025-06-02 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-06-27</p>
+                <div class="task-info">
+                    <strong>Notas:</strong><br>
+                </div>
+                <div class="task-info">
+                    <strong>Progreso:</strong> 100%
+                </div>
+                <div class="task-info">
+                    <div class="date-display">Entrega: 2025-12-31</div>
+                </div>
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 0%</p>
-                    <p>Fecha Fin: 2025-06-27</p>
-                </div>
-                <h2>AB6        - Streaming for Import's Receiving Process</h2>
-                <p><b>Notas:</b> None</p>
-                <p><b>Inicio:</b> 2025-06-02 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-06-27</p>
+        <div class="image-column">
+            <img src="../img/IMG_1106.JPEG" alt="Background">
+        </div>
+    </div>
+    
+    <div class="double layout-grid">
+        <div class="text-area">
+            <h2>Estrategia Gobierno de Datos</h2>
+            <div class="task-info">
+                <div class="task-label">Código</div>
+                <div class="task-value">AC1       </div>
+            </div>
+            <div class="task-info">
+                <div class="task-label">Notas</div>
+                <div class="task-value">..</div>
+            </div>
+            <div class="highlight-box">
+                <strong>Progreso:</strong> 100%<br>
+                <strong>Estado:</strong> Plan Anterior
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 0%</p>
-                    <p>Fecha Fin: 2025-06-27</p>
+        <div class="image-area-1">
+            <img src="../img/IMG_1990.JPEG" alt="Background">
+        </div>
+        <div class="image-area-2">
+            <div>
+                <div class="task-label">Depósito</div>
+                <div style="font-size: 18px; font-weight: 700; margin-bottom: 10px;">
+                    Finalizado
                 </div>
-                <h2>AD5        - PSI Musical</h2>
-                <p><b>Notas:</b> "El proyecto, a pesar de su complejidad y múltiples sub-tareas, muestra un avance considerable en sus diferentes frentes. El enfoque principal ha sido la correcta estructuración y visualización de datos dentro de diferentes herramientas como Power BI y Power Automate. Hasta el momento se han resuelto varios aspectos técnicos como la conexión con modelos semánticos y la automatización de reportes con PowerBuilder.
-
-Se destacaron los siguientes puntos clave:
-
-1. **Informes y Visualizaciones**: Se ha trabajado arduamente en la corrección de inconsistencias de datos en Excel, validación y estandarización junto con involucrados como Maritza y Santiago Ortiz. Además, se han logrado completar y presentar visualizaciones a stakeholders clave, aunque algunos informes aún requieren validación final o ajustes menores.
-
-2. **Reuniones y Coordinación**: Varias reuniones han sido clave para avanzar en la comprensión y ejecución de los requerimientos, incluyendo encuentros estratégicos con Natalia, Sebastian Nevado, y Mateo Alzate. También, está pendiente una reunión con Juan Camilo para abordar desarrollos relacionados con Python.
-
-3. **Automatización y Modelos de Datos**: Se ha avanzado en la automatización utilizando Power Automate y en la actualización de modelos de datos, incluyendo listas centralizadas para análisis financiero y rotación de personal.
-
-4. **Entregas y Validaciones**: Hay entregas formales ya realizadas a personas como Alexandra Restrepo y Diego con el cumplimiento de las especificaciones acordadas. Existen también solicitudes de validación pendientes por parte de usuarios con respecto a informes y visualizaciones específicas.
-
-5. **Pendientes**: Continúa pendiente la aprobación de algunas licencias, ajustes menores post-observaciones, y el desarrollo y validación de ciertos modelos y flujos dentro de Power Automate.
-
-En resumen, el proyecto sigue avanzando hacia sus objetivos clave con la colaboración interdepartamental, aunque ciertos elementos están aún sujetos a nuevas revisiones y aprobaciones finales para completarse completamente."</p>
-                <p><b>Inicio:</b> 2025-06-02 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-06-27</p>
+                <div class="task-label">Gerencia</div>
+                <div style="font-size: 16px;">
+                    Gerencia De Informatica
+                </div>
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 0%</p>
-                    <p>Fecha Fin: 2025-07-31</p>
+    </div>
+    
+    <div class="double layout-center-margins">
+        <div class="left-margin">
+            <div class="margin-text">AC3       </div>
+        </div>
+        <div class="center-content">
+            <div class="image-container">
+                <img src="../img/IMG_3073.JPEG" alt="Background">
+                <div class="text-overlay">
+                    <h2>Gestión del Desempeño</h2>
+                    <div class="task-info">
+                        <strong>Nuevo</strong> - 100%
+                    </div>
+                    <div class="task-info">
+                        ...
+                    </div>
                 </div>
-                <h2>AD2        - Modelo de datos estado de herramientas</h2>
-                <p><b>Notas:</b> "El proyecto ""Modelo de Indicadores para Gestión del Centro de Partes"" se encuentra en curso, con fechas de ejecución programadas entre el 2 de junio de 2025 y el 31 de octubre de 2025. Su objetivo principal es automatizar y mejorar la visualización de los indicadores clave de desempeño (KPIs) del Centro de Partes, que se encarga de la distribución de repuestos de motocicletas e instrumentos musicales. La implementación de un modelo de datos integrado, mediante el uso de Power BI, busca reducir la carga operativa actual que deriva del cálculo manual de KPIs, permitiendo su actualización semanal y mejorando la confiabilidad y frecuencia del seguimiento.
-
-Actualmente, el equipo de proyecto está centrado en el análisis de los procesos internos y la recopilación de requerimientos para el desarrollo del sistema automatizado. Han identificado que el cálculo manual presenta desafíos significativos en términos de carga operativa y limitaciones de eficacia, lo cual impacta en la capacidad de cumplir con los estándares exigidos por la casa matriz en Japón. Para abordar estos problemas, se está realizando un mapeo detallado de los indicadores actuales y un levantamiento de necesidades específicas para su integración en un modelo de datos centralizado.
-
-Se han establecido lineamientos para la estructura de datos necesaria y se está trabajando en la integración técnica de los diferentes sistemas existentes con Power BI. Asimismo, se ha subrayado la importancia de contar con una actualización semanal de los KPIs, lo que demandará ajustes en los procesos de recolección y procesamiento de datos. A pesar de los retos encontrados, el proyecto avanza dentro de los plazos previstos con un enfoque riguroso en optimizar tanto la toma de decisiones operativas como las estratégicas.
-
-El progreso hasta la fecha ha sido satisfactorio, con un fuerte compromiso por parte del equipo de asegurar que las soluciones propuestas no solo cumplan con las expectativas internas del centro, sino que también se alineen con los estándares internacionales de calidad y exigencias de evaluación de la casa matriz."</p>
-                <p><b>Inicio:</b> 2025-07-01 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-07-31</p>
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 0%</p>
-                    <p>Fecha Fin: 2025-12-26</p>
-                </div>
-                <h2>AD3        - SOLUCIÓN INTEGRAL DE DATOS DE CLIENTES 360 CON BI - IA</h2>
-                <p><b>Notas:</b> "La tarea ""Perfil Logístico y Ocupación de Estanterías"" está en su fase inicial, con fechas establecidas de inicio el 3 de junio de 2025 y finalización el 27 de junio de 2025. Este requerimiento ha sido identificado por el área logística para optimizar los recursos de almacenamiento y despacho mediante la implementación de informes SQL que mejoren la trazabilidad logística y la ocupación del almacén. El objetivo principal es optimizar la gestión operativa y cumplir con auditorías anuales solicitadas por la casa matriz en Japón.
-
-Actualmente, las medidas logísticas como peso y dimensiones están registradas en las tablas de Navision, aunque dicha información está incompleta y no se emplea de manera estructurada para generar indicadores o análisis volumétricos. Además, aunque existe una tabla de pedidos de venta utilizada para despachos, esta no está conectada con datos de cubicaje ni con la transportadora. También se ha identificado que la ocupación de las estanterías no se mide sistemáticamente y no hay una correlación clara entre la capacidad física de las ubicaciones y el volumen de las referencias almacenadas.
-
-Hasta el momento, no se han reportado avances específicos en el desarrollo del proyecto ya que se sigue programando la reunión de entendimiento de los requerimientos. No obstante, esta etapa preliminar es crucial para definir el alcance y los detalles técnicos necesarios para el éxito del proyecto."</p>
-                <p><b>Inicio:</b> 2025-04-01 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-12-26</p>
+        <div class="right-margin">
+            <div class="margin-text">PROYECTO</div>
+        </div>
+    </div>
+    
+    <div class="double layout-grid">
+        <div class="text-area">
+            <h2>Selección - Ingresos</h2>
+            <div class="task-info">
+                <div class="task-label">Código</div>
+                <div class="task-value">AC3       </div>
+            </div>
+            <div class="task-info">
+                <div class="task-label">Notas</div>
+                <div class="task-value">..</div>
+            </div>
+            <div class="highlight-box">
+                <strong>Progreso:</strong> 100%<br>
+                <strong>Estado:</strong> Nuevo
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 8%</p>
-                    <p>Fecha Fin: 2025-12-26</p>
+        <div class="image-area-1">
+            <img src="../img/IMG_2792.JPEG" alt="Background">
+        </div>
+        <div class="image-area-2">
+            <div>
+                <div class="task-label">Depósito</div>
+                <div style="font-size: 18px; font-weight: 700; margin-bottom: 10px;">
+                    Finalizado
                 </div>
-                <h2>           - PLAN DE ESTUDIO</h2>
-                <p><b>Notas:</b> "El proyecto ""PBI Visión 360° – Centralización, Gobernanza y Autoservicio"" avanza en dos etapas principales. La primera etapa, programada para el 28 de mayo de 2025, se enfoca en la elaboración de un acta destinada a estandarizar datos provenientes de listas y archivos Excel que aún no están en la bodega de datos. Este documento identificará a los responsables de diligenciar, validar y estandarizar la información, detallando elementos clave como el nombre de las listas, el enlace a estas, el área responsable y el dueño del área. Una reunión con Luisa ha sido programada para revisar y ajustar el primer borrador de este acta.
-
-En la segunda etapa, con un periodo de ejecución del 23 de mayo al 6 de agosto de 2025, se ha desarrollado un modelo de Arquitectura de Gobernanza en formato PowerPoint. Este modelo define roles y funciones de cada participante, estableciendo un esquema y flujo para garantizar una gobernanza ordenada y responsable en el manejo de datos y recursos. El proyecto se enfoca en asegurar un marco de trabajo estructurado para la centralización y estandarización de datos, promoviendo una gestión eficiente con claros lineamientos de responsabilidad y gobernanza."</p>
-                <p><b>Inicio:</b> 2025-02-04 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-12-31</p>
+                <div class="task-label">Gerencia</div>
+                <div style="font-size: 16px;">
+                    Gerencia De Talento Humano
+                </div>
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 0%</p>
-                    <p>Fecha Fin: 2025-12-01</p>
+    </div>
+    
+    <div class="double layout-center-margins">
+        <div class="left-margin">
+            <div class="margin-text">AA6       </div>
+        </div>
+        <div class="center-content">
+            <div class="image-container">
+                <img src="../img/IMG_0283.JPEG" alt="Background">
+                <div class="text-overlay">
+                    <h2>Modelo de aprobación de créditos y limite de incremento</h2>
+                    <div class="task-info">
+                        <strong>Planeado</strong> - 100%
+                    </div>
+                    <div class="task-info">
+                        ...
+                    </div>
                 </div>
-                <h2>AB2        - SAIA</h2>
-                <p><b>Notas:</b> "La tarea ""Integración Estado Entrega Transportadoras"" se encuentra en desarrollo y tiene como objetivo la obtención y procesamiento de datos de dos transportadoras mediante diferentes métodos debido a las limitaciones encontradas en sus APIs. 
-
-Para Transprensa, aunque se logró acceso a su API, las pruebas indicaron que presenta limitaciones significativas y datos desactualizados. Como solución, se ha decidido ejecutar la integración mediante técnicas de web scraping que permitirán obtener información más precisa y actualizada. 
-
-En el caso de Aldia, se ha completado la verificación de acceso a su API, sin embargo, aún es necesario avanzar en la recuperación de los datos pertinentes para completar el proceso de integración. 
-
-La tarea tiene una fecha de inicio del 3 de junio de 2025 y se prevé su finalización para el 13 de junio de 2025. El equipo continúa trabajando en superar estos desafíos técnicos para cumplir con el cronograma establecido."</p>
-                <p><b>Inicio:</b> 2025-06-02 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-12-01</p>
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 0%</p>
-                    <p>Fecha Fin: 2025-04-09</p>
+        <div class="right-margin">
+            <div class="margin-text">PROYECTO</div>
+        </div>
+    </div>
+    
+    <div class="double layout-diagonal">
+        <div class="diagonal-bg"></div>
+        <div class="content-wrapper">
+            <div class="text-section">
+                <div class="task-code" style="color: var(--accent-red);">AE7       </div>
+                <h2>Modelo de Datos Movimientos IVA - Cubo Movimiento Impuestos</h2>
+                <div class="task-info">
+                    <strong>Depósito:</strong> Finalizado
                 </div>
-                <h2>AA3        - Migración Procesos Centro de Partes</h2>
-                <p><b>Notas:</b> None</p>
-                <p><b>Inicio:</b> 2025-03-12 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-03-31</p>
+                <div class="task-info">
+                    <strong>Gerencia:</strong> Gerencia Contraloria
+                </div>
+                <div class="percentage-badge">100% Completado</div>
+            </div>
+            <div class="image-section">
+                <img src="../img/IMG_3073.JPEG" alt="Background">
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 0%</p>
-                    <p>Fecha Fin: 2025-06-27</p>
+    </div>
+    
+    <div class="double layout-diagonal">
+        <div class="diagonal-bg"></div>
+        <div class="content-wrapper">
+            <div class="text-section">
+                <div class="task-code" style="color: var(--accent-red);">AB2       </div>
+                <h2>SAIA</h2>
+                <div class="task-info">
+                    <strong>Depósito:</strong> En curso
                 </div>
-                <h2>AB9        - CSA218</h2>
-                <p><b>Notas:</b> None</p>
-                <p><b>Inicio:</b> 2025-06-16 &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> 2025-06-17</p>
+                <div class="task-info">
+                    <strong>Gerencia:</strong> Gerencia De Informatica
+                </div>
+                <div class="percentage-badge">0% Completado</div>
+            </div>
+            <div class="image-section">
+                <img src="../img/IMG_0283.JPEG" alt="Background">
             </div>
         </div>
-        
-        <div class="double">
-            <div class="page-content">
-                <div class="page-header">
-                    <p>Ejecución: 0%</p>
-                    <p>Fecha Fin: None</p>
+    </div>
+    
+    <div class="double layout-diagonal">
+        <div class="diagonal-bg"></div>
+        <div class="content-wrapper">
+            <div class="text-section">
+                <div class="task-code" style="color: var(--accent-red);">AC7       </div>
+                <h2>precios de transferencia anual (requerimiento NAV REQ_001046 2019)</h2>
+                <div class="task-info">
+                    <strong>Depósito:</strong> En curso
                 </div>
-                <h2>AD5        - Modelo Datos B2chat Garantías. - Revisión</h2>
-                <p><b>Notas:</b> None</p>
-                <p><b>Inicio:</b> None &nbsp;&nbsp; → &nbsp;&nbsp; 
-                   <b>Entrega Estimada:</b> None</p>
+                <div class="task-info">
+                    <strong>Gerencia:</strong> Gerencia Contraloria
+                </div>
+                <div class="percentage-badge">74% Completado</div>
+            </div>
+            <div class="image-section">
+                <img src="../img/IMG_2792.JPEG" alt="Background">
             </div>
         </div>
-        
+    </div>
+    
+    <div class="double layout-diagonal">
+        <div class="diagonal-bg"></div>
+        <div class="content-wrapper">
+            <div class="text-section">
+                <div class="task-code" style="color: var(--accent-red);">AC6       </div>
+                <h2>Liquidación de Costos Logísticos de las Importaciones</h2>
+                <div class="task-info">
+                    <strong>Depósito:</strong> Por hacer
+                </div>
+                <div class="task-info">
+                    <strong>Gerencia:</strong> Gerencia Contraloria
+                </div>
+                <div class="percentage-badge">0% Completado</div>
+            </div>
+            <div class="image-section">
+                <img src="../img/IMG_1106.JPEG" alt="Background">
+            </div>
+        </div>
+    </div>
+    
+    <div class="double layout-grid">
+        <div class="text-area">
+            <h2>Data Modeling for Technical Services at Points of Sale (POS)</h2>
+            <div class="task-info">
+                <div class="task-label">Código</div>
+                <div class="task-value">AA7       </div>
+            </div>
+            <div class="task-info">
+                <div class="task-label">Notas</div>
+                <div class="task-value">..</div>
+            </div>
+            <div class="highlight-box">
+                <strong>Progreso:</strong> 0%<br>
+                <strong>Estado:</strong> Planeado
+            </div>
+        </div>
+        <div class="image-area-1">
+            <img src="../img/IMG_3052.JPEG" alt="Background">
+        </div>
+        <div class="image-area-2">
+            <div>
+                <div class="task-label">Depósito</div>
+                <div style="font-size: 18px; font-weight: 700; margin-bottom: 10px;">
+                    Por hacer
+                </div>
+                <div class="task-label">Gerencia</div>
+                <div style="font-size: 16px;">
+                    Gerencia Servicio Al Cliente
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="double layout-center-margins">
+        <div class="left-margin">
+            <div class="margin-text">AC8       </div>
+        </div>
+        <div class="center-content">
+            <div class="image-container">
+                <img src="../img/IMG_2797.JPEG" alt="Background">
+                <div class="text-overlay">
+                    <h2>Migración reportes a DWH</h2>
+                    <div class="task-info">
+                        <strong>Planeado</strong> - 0%
+                    </div>
+                    <div class="task-info">
+                        ...
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-margin">
+            <div class="margin-text">PROYECTO</div>
+        </div>
+    </div>
+    
+    <div class="double layout-full-overlay">
+        <div class="background-image">
+            <img src="../img/IMG_2799.JPEG" alt="Background">
+        </div>
+        <div class="gradient-overlay"></div>
+        <div class="content-box">
+            <h2>
+                Modelo
+                <span class="red-accent">de datos estado de herramientas</span>
+            </h2>
+            <div class="task-info" style="font-size: 16px; margin-bottom: 15px;">
+                <strong>Código:</strong> AD2       
+            </div>
+            <div class="task-info">
+                <strong>Depósito:</strong> Por hacer
+            </div>
+            <div class="task-info">
+                <strong>Estado:</strong> Planeado
+            </div>
+            <div class="percentage-badge" style="margin-top: 20px; font-size: 18px;">
+                0%
+            </div>
+        </div>
+    </div>
+    
+    <div class="double layout-center-margins">
+        <div class="left-margin">
+            <div class="margin-text">AD3       </div>
+        </div>
+        <div class="center-content">
+            <div class="image-container">
+                <img src="../img/IMG_2799.JPEG" alt="Background">
+                <div class="text-overlay">
+                    <h2>SOLUCIÓN INTEGRAL DE DATOS DE CLIENTES 360 CON BI - IA</h2>
+                    <div class="task-info">
+                        <strong>Planeado</strong> - 0%
+                    </div>
+                    <div class="task-info">
+                        ...
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-margin">
+            <div class="margin-text">PROYECTO</div>
+        </div>
+    </div>
+    
           </div>
         </div>
       </div>
@@ -894,9 +1274,18 @@ La tarea tiene una fecha de inicio del 3 de junio de 2025 y se prevé su finaliz
       <script type="text/javascript" src="../lib/turn.min.js"></script>
       <script type="text/javascript">
         $('.flipbook').turn({ 
-            elevation:50, 
-            gradients:true, 
-            autoCenter:true 
+            elevation: 50, 
+            gradients: true, 
+            autoCenter: true,
+            duration: 1000,
+            acceleration: true,
+            display: 'double',
+            when: {
+                turning: function(event, page, view) {
+                    // Animación al pasar página
+                    console.log('Página actual:', page);
+                }
+            }
         });
       </script>
     </body>
