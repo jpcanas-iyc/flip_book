@@ -59,6 +59,7 @@ def obtener_tareas(engine):
     LEFT JOIN [DWH_INCOLMOTOS].[ti].[Dim_Estado_Tareas_Project] E
         ON T.Estado_Tarea_Project_key = E.Estado_Tarea_Project_key
     WHERE T.Jefatura_Project_Key = 2
+    and Tarea_Project_Key NOT IN (41, 33)
     """
     df = pd.read_sql(query, engine)
     return df
