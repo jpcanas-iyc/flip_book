@@ -63,6 +63,27 @@ def obtener_tareas(engine):
     df = pd.read_sql(query, engine)
     return df
 
+
+def Promedio_Encuestas(engine):
+    query = """
+        SELECT 
+            COUNT(*) AS Total_Encuestas,
+            ROUND(AVG(Calidad_Entrega),2)        AS Promedio_Calidad,
+            ROUND(AVG(Tiempo_Entrega),2)         AS Promedio_Tiempo,
+            ROUND(AVG(Acompañamiento_Entrega),2) AS Promedio_Acompanamiento,
+            ROUND(AVG(Experiencia_Entrega),2)    AS Promedio_Experiencia
+        FROM [DWH_INCOLMOTOS].[admn].[Fact_Encuesta_Proyectos];
+    """
+    promedio = pd.read_sql(query, engine)
+    return promedio
+
+
+
+
+
+
+
+
 # -------------------------
 # 3. Obtener imágenes aleatorias
 # -------------------------
@@ -439,9 +460,12 @@ def generar_flipbook(df, output="output/flipbook.html"):
 
 
     pagina_imagen = f"""
-    <div class="double full-image-page">
+    <div class="double full-image-page"
+        style="background-image: url('../img/IMG_0283.jpeg');">
     </div>
     """
+
+
     paginas.append(pagina_imagen)
     
 
@@ -540,7 +564,7 @@ def generar_flipbook(df, output="output/flipbook.html"):
                         display:block;
                         width:100%;
                         padding:6px 14px;
-                        border-radius:20px;
+                        border-radius:5px;
                         background-color:rgba(46,125,50,0.06);
                         color:#666666;
                         font-size:14px;
@@ -561,7 +585,7 @@ def generar_flipbook(df, output="output/flipbook.html"):
                             display:block;
                             width:100%;
                             padding:6px 14px;
-                            border-radius:20px;
+                            border-radius:5px;
                             background-color:rgba(212,160,23,0.05);
                             color:#666666;
                             font-size:14px;
@@ -581,7 +605,7 @@ def generar_flipbook(df, output="output/flipbook.html"):
                         <span style="
                             display:block;
                             width:100%;
-                            padding:6px 14px;
+                            padding:6px 5px;
                             border-radius:20px;
                             background-color:rgba(10,45,130,0.05);
                             color:#666666;
@@ -607,8 +631,36 @@ def generar_flipbook(df, output="output/flipbook.html"):
 
     paginas.append(estadistica_html)
 
+
+
+
+    df_prom = Promedio_Encuestas(engine)
+
+    total_encuestas = int(df_prom["Total_Encuestas"][0])
+    prom_calidad = float(df_prom["Promedio_Calidad"][0])
+    prom_tiempo = float(df_prom["Promedio_Tiempo"][0])
+    prom_acomp = float(df_prom["Promedio_Acompanamiento"][0])
+    prom_exp = float(df_prom["Promedio_Experiencia"][0])
+
+    indice_global = round(
+        (prom_calidad + prom_tiempo + prom_acomp + prom_exp) / 4, 2
+    )
+
+    estrellas_llenas = int(round(indice_global))
+    estrellas_html = ""
+
+    for i in range(5):
+        if i < estrellas_llenas:
+            estrellas_html += '<span class="star filled">★</span>'
+        else:
+            estrellas_html += '<span class="star empty">☆</span>'
+
+
+
+    
+
                         
-    pagina_kpi = """
+    pagina_kpi = f"""
     <div class="double kpi-page">
         <div class="kpi-container">
 
@@ -621,8 +673,21 @@ def generar_flipbook(df, output="output/flipbook.html"):
             <div class="kpi-top-graphs">
 
                 <!-- Gráfica -->
-                <div class="kpi-graph-card">
-                    <div class="kpi-graph-title">Cumplimiento Proyectos</div>
+                <div >
+                    <span style="
+                        display:inline-block;
+                        padding:4px 12px;
+                        border-radius:5px;
+                        background-color:rgba(198,40,40,0.08);
+                        color:#C62828;
+                        font-size:12px;
+                        font-weight:600;
+                        letter-spacing:0.5px;
+                        text-align:left;
+                        margin-bottom:10px;
+                    ">
+                        Cumplimiento Proyectos
+                    </span>
 
                     <div class="kpi-bar-chart">
                         <div class="kpi-bar-item">
@@ -640,46 +705,141 @@ def generar_flipbook(df, output="output/flipbook.html"):
                             </div>
                             <div class="kpi-bar-value">82%</div>
                         </div>
+
+                        <div class="kpi-bar-item">
+                            <div class="kpi-bar-label">Plan Anterior</div>
+                            <div class="kpi-bar">
+                                <div class="kpi-bar-fill p82"></div>
+                            </div>
+                            <div class="kpi-bar-value">82%</div>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Descripción -->
-                <div>
-                    Este indicador muestra la relación entre los proyectos planeados para el periodo
-                    y los nuevos proyectos incorporados durante la ejecución del plan de trabajo.
-                    Permite visualizar la capacidad de planificación y adaptación operativa.
+                <div style="font-size:10px; line-height:2.4;">
+
+                    <span style="color:#C62828; font-weight:700;">31 proyectos</span> 
+                    forman parte del plan anual estratégico definido para el 2026 (Proyectos planeados y Planes anteriores). 
+                    De estos, se han ejecutado 
+                    <span style="color:#C62828; font-weight:700;">10 proyectos</span>, 
+                    lo que representa un avance del 
+                    <span style="color:#C62828; font-weight:700;">30%</span> 
+                    frente a lo planificado.
+
+                    Durante el transcurso del año han ingresado 
+                    <span style="color:#C62828; font-weight:700;">16 nuevos proyectos</span>, 
+                    de los cuales se han ejecutado 
+                    <span style="color:#C62828; font-weight:700;">5 proyectos</span>.
+
+                    En total, la gestión del año contempla 
+                    <span style="color:#C62828; font-weight:700;">47 proyectos</span>, 
+                    lo que representa un incremento del 
+                    <span style="color:#C62828; font-weight:700;">51,6%</span> 
+                    frente a lo inicialmente planificado.
+
+                </div>
+
+            </div>  
+
+            <div class="kpi-roi-header">
+                <div class="kpi-roi-title">
+                    Desempeño del ROI
+                </div>
+            </div>
+
+            
+
+
+
+
+
+           <div class="kpi-quick-stats">
+
+                <div class="kpi-quick-item">
+                    <div class="kpi-metric-value">128</div>
+                    <div class="kpi-quick-label">Suma Cantidad de Procesos</div>
+                </div>
+
+                <div class="kpi-quick-item">
+                    <div class="kpi-metric-value">321</div>
+                    <div class="kpi-quick-label">Ahorros Tiempo Horas</div>
+                </div>
+
+                <div class="kpi-quick-item">
+                    <div class="kpi-metric-value">1,050</div>
+                    <div class="kpi-quick-label">Ahorro Dinero</div>
+                </div>
+
+                <div class="kpi-quick-item">
+                    <div class="kpi-metric-value">4</div>
+                    <div class="kpi-quick-label">Cantidad Personas Beneficiadas</div>
+                </div>
+
+                <!-- 👇 Nota explicativa -->
+                <div class="kpi-footer-notedesc">
+                    Se realizaron <strong>17 encuestas</strong> para evaluar la satisfacción del cliente
+                    a partir de 4 hitos importantes que engloban la experiencia general durante
+                    y después de la entrega del proyecto (1 = Muy insatisfecho / 5 = Muy satisfecho).
                 </div>
 
             </div>
 
+
+
+
+
+
+
+
+
             <div class="kpi-bottom-section"> 
-            
-            <div class="kpi-general-rating">
-                <span class="star filled">★</span>
-                <span class="star filled">★</span>
-                <span class="star filled">★</span>
-                <span class="star empty">☆</span>
-                <span class="star empty">☆</span>
-                </div> <div class="kpi-satisfaction-grid">
-            <div class="kpi-metric-item">
-                <div class="kpi-metric-value">4,53</div>
-                <div class="kpi-metric-label">Calidad de la<br>Solución</div> </div>
-                <div class="kpi-metric-item"> <div class="kpi-metric-value">4,18</div>
-                <div class="kpi-metric-label">Tiempos de<br>entrega</div> </div>
-                <div class="kpi-metric-item"> <div class="kpi-metric-value">4,35</div>
-            <div class="kpi-metric-label">Acompañamiento</div> </div> 
-                <div class="kpi-metric-item"> <div class="kpi-metric-value">4,59</div> 
-                <div class="kpi-metric-label">Experiencia de<br>Cliente</div> </div> </div>
-                <div class="kpi-footer-note"> Se realizaron
-                <strong>17 encuestas</strong>
-                para evaluar la satisfacción del cliente a partir de 4 hitos
-                importantes que engloba la experiencia general que tuvo el
-                cliente durante y después de la entrega de un proyecto
-                (1 = Muy insatisfecho / 5 = Muy satisfecho). </div> </div>
+
+                <div class="kpi-general-rating">
+                    {estrellas_html}
+                </div>
+
+                <div class="kpi-satisfaction-grid">
+
+                    <div class="kpi-metric-item">
+                        <div class="kpi-metric-value">{prom_calidad}</div>
+                        <div class="kpi-metric-label">Calidad de la<br>Solución</div>
+                    </div>
+
+                    <div class="kpi-metric-item">
+                        <div class="kpi-metric-value">{prom_tiempo}</div>
+                        <div class="kpi-metric-label">Tiempos de<br>entrega</div>
+                    </div>
+
+                    <div class="kpi-metric-item">
+                        <div class="kpi-metric-value">{prom_acomp}</div>
+                        <div class="kpi-metric-label">Acompañamiento</div>
+                    </div>
+
+                    <div class="kpi-metric-item">
+                        <div class="kpi-metric-value">{prom_exp}</div>
+                        <div class="kpi-metric-label">Experiencia de<br>Cliente</div>
+                    </div>
+
+                </div>
+
+                <div class="kpi-footer-note">
+                    Se realizaron <strong style="color:#C62828;"><b>{total_encuestas} encuestas</b></strong>
+
+
+                    para evaluar la satisfacción del cliente a partir de 4 hitos
+                    importantes que engloba la experiencia general que tuvo el
+                    cliente durante y después de la entrega de un proyecto
+                    (1 = Muy insatisfecho / 5 = Muy satisfecho).
+                </div>
+
+            </div>
 
         </div>
     </div>
     """
+
+
 
 
     paginas.append(pagina_kpi)
@@ -981,6 +1141,8 @@ def generar_flipbook(df, output="output/flipbook.html"):
     logger.info(f"⬆️  Portada: título arriba, subtítulo abajo")
     logger.info(f"➡️  Flechas en los bordes de la pantalla")
     logger.info(f"📖 Efecto de hojas aparece después de la portada")
+
+
 
 # -------------------------
 # 7. Ejecutar
