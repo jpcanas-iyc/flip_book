@@ -1,0 +1,1960 @@
+/* Enhanced Flipbook Styles - Multiple Design Layouts */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;600&display=swap');
+
+
+
+:root {
+    --primary-dark: #1E1E1E;
+    --primary-gray: #BCBDBC;
+    --primary-light: #F1F1F4;
+    --accent-gray: #616365;
+    --accent-blue: #0A2D82;
+    --accent-red: #FF0000;
+}
+
+body {
+    overflow: hidden;
+    background-color: #bcbcbc;
+    margin: 0;
+    padding: 0;
+    font-family: 'Sora', 'Montserrat', sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    height: 100vh;
+}
+
+* {
+    font-family: 'Sora', sans-serif !important;
+}
+
+
+h1, h2 {
+    font-family: 'Sora', sans-serif;
+    /*font-weight: 50;  SemiBold */
+    letter-spacing: -0.5px;
+}
+
+
+
+.flipbook-viewport {
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.flipbook-viewport .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1056px;
+    height: 640px;
+}
+
+.flipbook-viewport .flipbook {
+    width: 1056px;
+    height: 640px;
+}
+
+.flipbook-viewport .page {
+    width: 528px;
+    height: 640px;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.flipbook .page {
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+/* ========================================
+   DISEÑO 1: Layout Lateral Izquierdo
+   ======================================== */
+.layout-left-text {
+    display: flex;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.layout-left-text .text-column {
+    width: 35%;
+    background: linear-gradient(135deg, var(--accent-blue) 0%, #0a1d52 100%);
+    padding: 40px 30px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+
+
+.layout-right-text .text-column {
+    width: 35%;
+    background: linear-gradient(135deg, #2a2a2a 0%, #e0e0e0 100%);
+    padding: 40px 30px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+
+
+
+
+.layout-left-text .text-column::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"/></svg>');
+    background-size: 50px 50px;
+    opacity: 0.3;
+}
+
+.layout-left-text .text-content {
+    position: relative;
+    z-index: 3;
+}
+
+.layout-left-text .image-column {
+    width: 65%;
+    position: relative;
+    overflow: hidden;
+}
+
+.layout-left-text .image-column img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.layout-left-text .accent-line {
+    width: 60px;
+    height: 4px;
+    background: var(--accent-red);
+    margin-bottom: 20px;
+    animation: slideIn 0.6s ease-out;
+}
+
+.layout-left-text h2 {
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    font-size: 36px;
+    margin: 0 0 15px 0;
+    line-height: 1.1;
+}
+
+.layout-left-text .task-code {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.layout-left-text .task-info {
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 8px 0;
+}
+
+.layout-left-text .progress-bar {
+    width: 100%;
+    height: 6px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 3px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.layout-left-text .progress-fill {
+    height: 100%;
+    background: var(--accent-red);
+    border-radius: 3px;
+    transition: width 1s ease-out;
+}
+
+/* ========================================
+   DISEÑO 2: Layout Lateral Derecho
+   ======================================== */
+.layout-right-text {
+    display: flex;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    flex-direction: row-reverse;
+}
+
+.layout-right-text .text-column {
+    width: 38%;
+    background: linear-gradient(225deg, var(--primary-dark) 0%, var(--accent-gray) 100%);
+    padding: 40px 30px;
+    color: var(--primary-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.layout-right-text .text-column::after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, var(--accent-blue) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.1;
+    top: -50%;
+    left: -50%;
+}
+
+.layout-right-text .text-content {
+    position: relative;
+    z-index: 3;
+}
+
+.layout-right-text .image-column {
+    width: 62%;
+    position: relative;
+    overflow: hidden;
+}
+
+.layout-right-text .image-column img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.95) contrast(1.05);
+}
+
+.layout-right-text h2 {
+    font-weight: 600;
+    font-size: 30px;
+    margin: 0 0 20px 0;
+    line-height: 1.2;
+    color: white;
+    letter-spacing: -0.4px;
+}
+
+.layout-right-text .divider {
+    width: 80px;
+    height: 2px;
+    background: var(--accent-red);
+    margin: 15px 0;
+}
+
+/* ========================================
+   DISEÑO 3: Layout Diagonal Split
+   ======================================== */
+.layout-diagonal {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    background: var(--primary-light);
+}
+
+.layout-diagonal .diagonal-bg {
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 60%;
+    height: 120%;
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--accent-blue) 100%);
+    transform: rotate(-15deg);
+    z-index: 1;
+}
+
+.layout-diagonal .content-wrapper {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+}
+
+.layout-diagonal .text-section {
+    width: 45%;
+    color: white;
+    padding-right: 30px;
+}
+
+.layout-diagonal .image-section {
+    width: 55%;
+    height: 80%;
+    position: relative;
+}
+
+.layout-diagonal .image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 20px 20px 40px rgba(0,0,0,0.3);
+    transform: rotate(3deg);
+}
+
+.layout-diagonal h2 {
+    font-weight: 600;
+    font-size: 38px;
+    letter-spacing: -0.6px;
+    margin: 0 0 15px 0;
+}
+
+/* ========================================
+   DISEÑO 4: Layout Centro con Márgenes
+   ======================================== */
+.layout-center-margins {
+    display: flex;
+    height: 100%;
+    background: var(--primary-dark);
+}
+
+.layout-center-margins .left-margin,
+.layout-center-margins .right-margin {
+    width: 20%;
+    background: linear-gradient(180deg, var(--accent-blue) 0%, var(--primary-dark) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.layout-center-margins .left-margin {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+.layout-center-margins .margin-text {
+    font-size: 24px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 6px;
+}
+
+.layout-center-margins .center-content {
+    width: 60%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.layout-center-margins .image-container {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.layout-center-margins .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.layout-center-margins .text-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, transparent 100%);
+    padding: 40px 30px 30px 30px;
+    color: white;
+}
+
+.layout-center-margins h2 {
+    font-weight: 600;
+    letter-spacing: -0.4px;
+    font-size: 28px;
+    margin: 0 0 15px 0;
+}
+
+/* ========================================
+   DISEÑO 5: Layout Full Image con Overlay
+   ======================================== */
+.layout-full-overlay {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.layout-full-overlay .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.layout-full-overlay .background-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.layout-full-overlay .gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(10,45,130,0.9) 0%, transparent 60%);
+    z-index: 2;
+}
+
+.layout-full-overlay .content-box {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+    width: 40%;
+    z-index: 3;
+    color: white;
+}
+
+.layout-full-overlay h2 {
+    margin: 0 0 20px 0;
+    line-height: 1;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-weight: 600;
+    font-size: 44px;
+    letter-spacing: -0.8px;
+}
+
+.layout-full-overlay .red-accent {
+    color: var(--accent-red);
+    display: block;
+}
+
+/* ========================================
+   DISEÑO 6: Layout Grid Asimétrico
+   ======================================== */
+.layout-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100%;
+    gap: 0;
+}
+
+.layout-grid .text-area {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    background: var(--primary-dark);
+    color: white;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.layout-grid .image-area-1 {
+    grid-column: 2;
+    grid-row: 1;
+    overflow: hidden;
+}
+
+.layout-grid .image-area-2 {
+    grid-column: 2;
+    grid-row: 2;
+    background: var(--accent-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    color: white;
+}
+
+.layout-grid .image-area-1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.layout-grid h2 {
+    font-size: 34px;
+    margin: 0 0 25px 0;
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.layout-grid .highlight-box {
+    background: var(--accent-red);
+    padding: 20px;
+    margin-top: 20px;
+    border-left: 4px solid white;
+}
+
+/* ========================================
+   Elementos Comunes
+   ======================================== */
+.task-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    opacity: 0.7;
+    margin-bottom: 8px;
+}
+
+.task-value {
+    font-size: 14px;
+    margin-bottom: 15px;
+    font-weight: 300;
+    line-height: 1.7;
+    letter-spacing: 0.3px;
+}
+
+.date-display {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.percentage-badge {
+    display: inline-block;
+    background: var(--accent-red);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* ========================================
+   Portada Especial MODIFICADA
+   (Título MÁS ARRIBA, más pequeño, sin línea roja)
+ /* ======================================== */
+/* ======================================== */
+.portada-custom {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    background: var(--primary-dark);
+}
+
+.portada-custom .bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.portada-custom .bg-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.portada-custom .overlay-content {
+    position: relative;
+    z-index: 2;
+    height: 105%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: white;
+    text-align: left;
+    padding: 3px 5px 5px 5px; /* Reducido padding superior e izquierdo */
+}
+
+/* Título MUCHO MÁS ARRIBA Y MÁS A LA IZQUIERDA */
+.portada-custom .title-container {
+    margin-top: -10;
+    margin-left: -10; /* Sin margen izquierdo adicional */
+    width: 100%;
+    text-align: left;
+}
+
+/* Información abajo del todo */
+.portada-custom .bottom-container {
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+
+/* Título MÁS PEQUEÑO y sin línea roja */
+.portada-custom h1 {
+    font-family: 'Sora', sans-serif;
+    font-weight: 300;
+    font-size: 46px;
+    letter-spacing: -1px;
+    text-align: left;
+    margin: 0; /* Elimina márgenes del h1 */
+}
+
+.portada-custom .subtitle {
+    font-family: 'Sora', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: 1px;
+    text-align: right;
+    color: #4A4C4E;
+}
+
+/* LÍNEA ROJA ELIMINADA */
+.portada-custom .accent-bar {
+    display: none;
+}
+
+/* ========================================
+   ESTADÍSTICAS – DISEÑO CON IMAGEN DE FONDO
+   ======================================== */
+
+.stats-premium {
+    background: rgba(255, 255, 255, 0.95);
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* IMAGEN DE FONDO - imagen1.png */
+.stats-premium::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../img/fondoYmcDER.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+    z-index: 1;
+    
+    
+}
+
+
+
+.stats-premiumL::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../img/Fondo_Blanco.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+    z-index: 1;
+     
+}
+
+
+.stats-premiumR::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to left,
+        rgba(0,0,0,0.10) 0%,
+        rgba(0,0,0,0.06) 8%,
+        rgba(0,0,0,0.03) 14%,
+        rgba(0,0,0,0.0) 22%,
+        transparent 30%,
+        transparent 100%
+    );
+    z-index: 2;
+    pointer-events: none;
+}
+
+
+.stats-premiumDerecha {
+    position: relative;
+    overflow: hidden;
+
+    /* SOLO el degradado gris */
+    background: linear-gradient(
+        to right,
+        rgba(0,0,0,0.25) 0%,
+        rgba(0,0,0,0.20) 8%,
+        rgba(0,0,0,0.17) 18%,
+        rgba(0,0,0,0.03) 28%,
+        transparent 38%
+    );
+}
+
+/* Imagen tipo marca de agua */
+.stats-premiumDerecha::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+
+    background: url('../img/caja_cambios.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 0.25; /* 👈 ajusta aquí la transparencia */
+    z-index: 0;
+}
+
+/* Asegura que el contenido quede encima */
+.stats-premiumDerecha > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+
+.stats-premium::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    z-index: 2;
+    
+}
+
+.stats-container {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Empresarial */
+.stats-hero-section {
+    margin-bottom: 18px;
+    border-bottom: 2px solid #E8E9EA;
+    padding-bottom: 12px;
+}
+
+.stats-kicker {
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--accent-blue);
+   /* margin-bottom: 6px;*/
+    /*font-weight: 700;*/
+}
+
+.stats-hero-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 900;
+    margin: 0 0 8px 0;
+    color: var(--primary-dark);
+    letter-spacing: -0.5px;
+}
+
+.hero-display {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+}
+
+.hero-number {
+    font-size: 48px;
+    color: var(--accent-red);
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+.hero-label {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--accent-gray);
+    font-weight: 600;
+}
+
+/* Grid de estadísticas - DOS FILAS HORIZONTALES */
+.stats-content-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    flex: 1;
+}
+
+/* Cards MÁS ANCHOS Y MENOS ALTOS */
+.stat-glass-card {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #E0E2E4;
+    border-radius: 10px;
+    padding: 14px 24px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: visible;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    height: auto;
+}
+
+.stat-glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--accent-red) 0%, var(--accent-blue) 100%);
+}
+
+.stat-glass-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    border-color: var(--accent-blue);
+}
+
+.stat-glass-card.highlight {
+    padding: 16px 24px;
+}
+
+/* Títulos de cards */
+.stat-card-title {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-blue);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.stat-card-title::before {
+    content: '';
+    width: 3px;
+    height: 14px;
+    background: var(--accent-red);
+}
+
+/* BARRAS EN GRID DE 2 COLUMNAS PARA MÁS ANCHO */
+.bar-chart {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 16px;
+}
+
+.bar-item {
+    position: relative;
+}
+
+.bar-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    color: var(--primary-dark);
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.bar-name {
+    flex: 1;
+    color: var(--accent-gray);
+}
+
+.bar-value {
+    font-size: 20px;
+    color: var(--accent-red);
+    letter-spacing: 1px;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+.bar-track {
+    width: 100%;
+    height: 7px;
+    background: #F1F3F5;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-red) 0%, #FF4444 100%);
+    border-radius: 4px;
+    position: relative;
+    transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Barras con colores empresariales */
+.bar-fill.color-1 {
+    background: linear-gradient(90deg, #FF0000 0%, #CC0000 100%);
+}
+
+.bar-fill.color-2 {
+    background: linear-gradient(90deg, #0A2D82 0%, #082152 100%);
+}
+
+.bar-fill.color-3 {
+    background: linear-gradient(90deg, #616365 0%, #4A4C4E 100%);
+}
+
+.bar-fill.color-4 {
+    background: linear-gradient(90deg, #BCBDBC 0%, #9A9B9A 100%);
+}
+
+/* Grid de estados - MÁS COMPACTO */
+.states-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.state-badge {
+    background: rgba(248, 249, 250, 0.95);
+    border: 2px solid #E8E9EA;
+    border-radius: 8px;
+    padding: 14px 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.state-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    border-color: var(--accent-red);
+    background: white;
+}
+
+.state-badge-value {
+    font-size: 30px;
+    color: var(--accent-red);
+    line-height: 1;
+    margin-bottom: 5px;
+    display: block;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+.state-badge-label {
+    font-size: 8px;
+    text-transform: uppercase;
+    color: var(--accent-gray);
+    display: block;
+    font-weight: 300;
+    line-height: 1.7;
+    letter-spacing: 0.3px;
+}
+
+/* Animación de entrada suave */
+@keyframes slideInStats {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.stat-glass-card {
+    animation: slideInStats 0.4s ease-out backwards;
+}
+
+.stat-glass-card:nth-child(1) { animation-delay: 0.1s; }
+.stat-glass-card:nth-child(2) { animation-delay: 0.15s; }
+
+/* ========================================
+   Página de imagen completa después de portada
+   ======================================== */
+.full-image-page {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.full-image-page img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.full-image-page::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            to left,
+            rgba(0,0,0,0.55) 0%,
+            rgba(0,0,0,0.40) 10%,
+            rgba(0,0,0,0.25) 20%,
+            rgba(0,0,0,0.10) 30%,
+            rgba(0,0,0,0.03) 38%,
+            transparent 48%
+        ),
+        linear-gradient(
+            rgba(255,255,255,0.35),
+            rgba(255,255,255,0.35)
+        );
+    pointer-events: none;
+}
+
+
+.full-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.full-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+
+.full-video-page {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Video ocupa todo */
+.full-video-page video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* 👈 clave para que se vea como background */
+}
+
+/* Degradado oscuro lateral */
+.full-video-page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+
+    background:
+        linear-gradient(
+            to left,
+            rgba(0,0,0,0.55) 0%,
+            rgba(0,0,0,0.40) 10%,
+            rgba(0,0,0,0.25) 20%,
+            rgba(0,0,0,0.10) 30%,
+            rgba(0,0,0,0.03) 38%,
+            transparent 48%
+        ),
+        linear-gradient(
+            rgba(255,255,255,0.35),
+            rgba(255,255,255,0.35)
+        );
+}
+
+
+/* ========================================
+   FLECHAS COMPLETAMENTE NUEVAS - EN LOS BORDES EXTERNOS
+   ======================================== */
+
+/* Contenedor para las flechas - FIJO EN TODA LA PANTALLA */
+.navigation-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Permite clics a través del contenedor */
+    z-index: 9999;
+}
+
+/* ÁREAS CLICKEABLES EN LOS BORDES */
+.nav-area {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 80px; /* Ancho del área clickeable */
+    pointer-events: all; /* Activa clics solo en estas áreas */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.nav-area-left {
+    left: 0;
+}
+
+.nav-area-right {
+    right: 0;
+}
+
+/* Efecto hover en las áreas */
+.nav-area:hover {
+    background-color: rgba(10, 45, 130, 0.1);
+}
+
+/* ÍCONOS DE FLECHAS - TRANSPARENTES Y EN LOS BORDES */
+.nav-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: var(--accent-blue);
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid var(--accent-blue);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 10000;
+    opacity: 0.8;
+}
+
+.nav-icon:hover {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1);
+    background-color: var(--accent-blue);
+    color: white;
+    box-shadow: 0 4px 12px rgba(10, 45, 130, 0.3);
+}
+
+/* Flecha izquierda - PEGADA AL BORDE IZQUIERDO */
+.nav-icon-left {
+    left: 5px;
+}
+
+/* Flecha derecha - PEGADA AL BORDE DERECHO */
+.nav-icon-right {
+    right: 5px;
+}
+
+/* Versión alternativa: flechas semi-transparentes pegadas a los bordes */
+.nav-arrow-minimal {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 9999;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.nav-arrow-minimal:hover {
+    background-color: rgba(10, 45, 130, 0.8);
+    border-color: var(--accent-blue);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.nav-arrow-minimal-left {
+    left: 2px;
+}
+
+.nav-arrow-minimal-right {
+    right: 2px;
+}
+
+/* Flechas estilo botón lateral simple */
+.nav-side-button {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35px;
+    height: 100px;
+    background-color: rgba(10, 45, 130, 0.7);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 9999;
+    border: none;
+    outline: none;
+}
+
+.nav-side-button:hover {
+    background-color: var(--accent-blue);
+    width: 40px;
+}
+
+.nav-side-button-left {
+    left: 0;
+    border-radius: 0 5px 5px 0;
+}
+
+.nav-side-button-right {
+    right: 0;
+    border-radius: 5px 0 0 5px;
+}
+
+/* ========================================
+   Animaciones
+   ======================================== */
+@keyframes slideIn {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    to {
+        width: 60px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-in {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+
+/* ========================================
+   PÁGINA KPI - Indicadores de Desempeño
+   ======================================== */
+
+.kpi-page {
+    background: rgba(255, 255, 255, 0.95);
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Imagen de fondo estilo marca de agua (igual que stats-premium) */
+.kpi-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../img/xsr900blancoRojo2.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    z-index: 1;
+}
+
+/* Degradado lateral gris (efecto sombra) */
+.kpi-page::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to left,
+        rgba(0,0,0,0.10) 0%,
+        rgba(0,0,0,0.06) 8%,
+        rgba(0,0,0,0.03) 14%,
+        rgba(0,0,0,0.0) 22%,
+        transparent 30%,
+        transparent 100%
+    );
+    z-index: 2;
+    pointer-events: none;
+}
+
+.kpi-container {
+    position: relative;
+    z-index: 3;
+    height: 100%;
+    padding: 18px 28px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+/* Título principal */
+.kpi-main-title {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.kpi-main-title h1 {
+    color: #B71C1C;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+    letter-spacing: -0.3px;
+}
+
+/* Grid de proyectos superior */
+.kpi-projects-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 12px;
+    padding: 10px;
+    background: rgba(245, 245, 245, 0.95);
+    border-radius: 5px;
+}
+
+.kpi-project-card {
+    text-align: center;
+}
+
+.kpi-project-label {
+    color: #B71C1C;
+    font-weight: 700;
+    margin-bottom: 4px;
+    font-size: 8.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.kpi-project-number {
+    font-size: 28px;
+    font-weight: 700;
+    color: #B71C1C;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+.kpi-project-desc {
+    font-size: 7.5px;
+    margin-top: 4px;
+    line-height: 1.2;
+    font-weight: 300;
+}
+
+/* Notas explicativas con borde rojo */
+.kpi-info-box {
+    background: rgba(249, 249, 249, 0.95);
+    border-left: 3px solid #B71C1C;
+    padding: 6px 8px;
+    margin-bottom: 15px;
+    font-size: 7.5px;
+    line-height: 1.3;
+    font-weight: 300;
+}
+
+.kpi-info-box.compact {
+    margin-bottom: 10px;
+}
+
+/* Título de sección */
+.kpi-section-header {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.kpi-section-header h2 {
+    color: #B71C1C;
+    font-size: 13px;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.3px;
+}
+
+/* Grid de círculos de progreso */
+.kpi-circles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.kpi-circle-card {
+    text-align: center;
+}
+
+/* Círculo de progreso base */
+.kpi-progress-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 8px auto;
+}
+
+/* Variantes de progreso */
+.kpi-progress-circle.p85 {
+    background: conic-gradient(#2C5F7C 0% 85%, #e0e0e0 85% 100%);
+}
+
+.kpi-progress-circle.p100 {
+    background: #2C5F7C;
+}
+
+.kpi-progress-circle.p77 {
+    background: conic-gradient(#2C5F7C 0% 77%, #e0e0e0 77% 100%);
+}
+
+.kpi-circle-inner {
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: #B71C1C;
+    letter-spacing: -1px;
+}
+
+.kpi-circle-label {
+    font-weight: 700;
+    color: #B71C1C;
+    margin-bottom: 5px;
+    font-size: 8.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.kpi-circle-text {
+    font-size: 7.5px;
+    line-height: 1.2;
+    font-weight: 300;
+}
+
+/* Badge de información adicional */
+.kpi-detail-badge {
+    background: rgba(208, 208, 208, 0.95);
+    padding: 4px;
+    margin-top: 5px;
+    font-size: 7px;
+    border-radius: 3px;
+    line-height: 1.2;
+    font-weight: 300;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Grid de satisfacción *//* Contenedor principal debe permitir posicionamiento absoluto */
+.kpi-page {
+    position: relative;
+    height: 100%;
+}
+
+/* Sección inferior pegada abajo */
+.kpi-bottom-section {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 6px 0 4px 0;
+}
+
+
+/* Estrellas superiores */
+.kpi-general-rating {
+    position: relative;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 2px;
+
+    padding: 2px 0 2px 0;   /* mínimo padding */
+    margin-bottom: 2px;
+
+    line-height: 1;         /* 👈 clave */
+}
+
+
+/* Línea inferior */
+.kpi-general-rating::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    width: 90%;
+    height: 1px;
+    background: rgba(0,0,0,0.15);
+}
+
+.kpi-general-rating .filled {
+    color: #444;
+}
+
+.kpi-general-rating .empty {
+    color: #bbb;
+}
+
+/* Grid */
+.kpi-satisfaction-grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 40px 0 50px;
+}
+
+/* Items */
+.kpi-metric-item {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+/* Separadores verticales */
+.kpi-metric-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 15%;
+    height: 70%;
+    width: 1px;
+    background: rgba(0, 0, 0, 0.12);
+}
+
+/* Icono */
+.kpi-metric-icon {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+/* Valor rojo */
+.kpi-metric-value {
+    font-size: 22px;
+    font-weight: 700;
+    color: #C62828;
+    margin-bottom: 4px;
+}
+
+/* Label */
+.kpi-metric-label {
+    font-size: 9px;
+    line-height: 1.3;
+    color: #333;
+}
+
+/* Nota inferior */
+.kpi-footer-note {
+    position: relative;
+
+    font-size: 10px;        /* antes 9px */
+    line-height: 1.35;       /* 👈 misma caligrafía que el texto descriptivo */
+    font-weight: 300;
+    letter-spacing: 0.2px;
+
+    color: #333;
+
+    padding: 3px 40px 0 50px;   /* ligero ajuste vertical */
+    border-left: 3px solid #C62828;
+    margin-top: 4px;
+}
+
+.kpi-footer-notedesc {
+    grid-column: 1 / -1;
+    text-align: left;
+
+    font-size: 10px;
+    line-height: 1.5;
+    font-weight: 300;
+    letter-spacing: 0.3px;
+    color: #444;
+
+    padding: 0 20px 8px 20px;   /* 👈 mucho más ancho */
+    margin-top: 8px;
+}
+
+
+
+/* Línea arriba del footer */
+.kpi-footer-note::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 5%;
+    width: 90%;
+    height: 1px;
+    background: rgba(0,0,0,0.15);
+}
+
+
+
+
+
+/* ========================= */
+/* ===== TOP GRAPHS ======== */
+/* ========================= */
+
+.kpi-top-graphs {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 20px;
+    align-items: stretch;
+}
+
+
+/* Contenedor independiente del título */
+.kpi-roi-header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* alineado a la izquierda */
+    margin: 10px 0 12px 0;
+}
+
+/* Caja roja tipo píldora */
+.kpi-roi-title {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 5px;
+    background-color: rgba(198,40,40,0.08);
+    color: #C62828;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    white-space: nowrap; /* evita que se rompa línea */
+}
+
+
+
+
+
+/* ========================= */
+/* ===== KPI QUICK STATS === */
+/* ========================= */
+
+
+.kpi-quick-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 0px 0 20px 0;   /* espacio superior equilibrado */
+    text-align: center;
+}
+
+.kpi-quick-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/* Separadores verticales en Quick Stats */
+.kpi-quick-item {
+    position: relative;
+}
+
+.kpi-quick-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 15%;
+    height: 70%;
+    width: 1px;
+    background: rgba(0, 0, 0, 0.12);
+}
+
+
+/* NÚMERO ARRIBA */
+.kpi-quick-value {
+    font-size: 22px;            /* igual que métricas de abajo */
+    font-weight: 700;
+    color: #C62828;
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+/* TEXTO ABAJO */
+.kpi-quick-label {
+    font-size: 9px;             /* mismo tamaño que kpi-metric-label */
+    line-height: 1.3;
+    color: #333;
+
+    letter-spacing: 0.5px;
+
+    min-height: 28px;           /* 👈 CLAVE para que todos queden alineados */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.kpi-quick-value {
+    font-size: 26px;
+    font-weight: 700;
+    color: #C62828;
+    line-height: 1;
+    letter-spacing: -0.5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* NUEVAS GRÁFICAS DEBAJO */
+.kpi-extra-graphs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.kpi-process-circle {
+    width: 110px;
+    height: 110px;
+    margin: 10px auto;
+    border-radius: 50%;
+    background: conic-gradient(
+        #C62828 0% 46%,
+        #8E0000 46% 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.kpi-process-inner {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    font-weight: 700;
+    color: #B71C1C;
+}
+
+.kpi-process-sub {
+    text-align: center;
+    font-size: 9px;
+    margin-top: 6px;
+    color: #444;
+}
+
+
+
+
+/* Card base */
+.kpi-graph-card {
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(6px);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    border-top: 3px solid #B71C1C;
+}
+
+.kpi-graph-description-side {
+    background: rgba(245,245,245,0.95);
+    border-left: 4px solid #C62828;
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 9px;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+
+.kpi-graph-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.kpi-graph-title {
+    text-align: center;
+    font-size: 11px;
+    font-weight: 700;
+    color: #B71C1C;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ===== BAR CHART ===== */
+
+.kpi-bar-item {
+    margin-bottom: 10px;
+}
+
+.kpi-bar-label {
+    font-size: 9px;
+    margin-bottom: 3px;
+}
+
+.kpi-bar {
+    height: 8px;
+    background: #eee;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.kpi-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #C62828, #B71C1C);
+    border-radius: 20px;
+}
+
+.kpi-bar-fill.p90 { width: 90%; }
+.kpi-bar-fill.p82 { width: 82%; }
+.kpi-bar-fill.p76 { width: 76%; }
+
+.kpi-bar-value {
+    font-size: 9px;
+    text-align: right;
+    margin-top: 2px;
+    font-weight: 600;
+}
+
+/* ===== DONUT CHART ===== */
+
+.kpi-donut {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 8px auto;
+    border-radius: 50%;
+    background: conic-gradient(
+        #C62828 0% 45%,
+        #8E0000 45% 75%,
+        #ccc 75% 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.kpi-donut-inner {
+    width: 65px;
+    height: 65px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+    color: #B71C1C;
+}
+
+.kpi-donut-legend {
+    display: flex;
+    justify-content: space-between;
+    font-size: 7px;
+}
+
+.dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 4px;
+}
+
+.dot.red { background: #C62828; }
+.dot.dark { background: #8E0000; }
+.dot.gray { background: #ccc; }
+
+/* ===== LINE CHART ===== */
+
+.kpi-line-chart {
+    position: relative;
+    height: 80px;
+    margin-top: 10px;
+}
+
+.kpi-line {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(90deg, #C62828, #B71C1C);
+}
+
+.kpi-point {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #B71C1C;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.kpi-point.p1 { left: 10%; }
+.kpi-point.p2 { left: 35%; top: 40%; }
+.kpi-point.p3 { left: 60%; top: 45%; }
+.kpi-point.p4 { left: 85%; top: 35%; }
